@@ -8,6 +8,11 @@
 <meta property="og:title" content="Hillcrest — Luxury Hilltop Villas | Urban Estates Dehradun" />
 <meta property="og:description" content="Where the hills meet the city. All villas sold — new MDDA approved project arriving soon." />
 <meta property="og:type" content="website" />
+<meta property="og:image" content="https://hillcrestdehradun.com/hd/sel-villas-mountains-panorama.jpg" />
+<meta property="og:image:width" content="1260" />
+<meta property="og:image:height" content="840" />
+<meta property="og:url" content="https://hillcrestdehradun.com" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F2EEE5' stroke='%23A88752' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23A88752'%3EH%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +67,15 @@
   .nav-cta:hover { background: var(--accent); color: var(--bg); }
 
   /* HERO */
-  .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: linear-gradient(rgba(15,20,16,0.35), rgba(15,20,16,0.72)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2200&q=85&auto=format&fit=crop') center/cover, linear-gradient(135deg, #1f2a22, #0F1410); }
-  .hero-side-mark { position: absolute; left: 32px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); opacity: 0.65; white-space: nowrap; z-index: 3; }
-  .hero-cinema-inner { position: relative; height: 100%; max-width: 1320px; margin: 0 auto; padding: 0 48px; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 100px; z-index: 2; }
+  .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: var(--dark); }
+  .hero-cinema { --parallax: 0px; }
+  .hero-cinema::before { content: ''; position: absolute; inset: -60px 0 0 0; background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2200&q=85&auto=format&fit=crop') center/cover no-repeat; animation: kenBurns 25s ease-in-out infinite alternate; transform: translateY(var(--parallax)); will-change: transform; }
+  .hero-cinema::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(15,20,16,0.25) 0%, rgba(15,20,16,0.45) 40%, rgba(15,20,16,0.78) 100%); z-index: 1; }
+  .hero-light { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(201,169,97,0.08) 0%, transparent 70%); animation: lightDrift 12s ease-in-out infinite alternate; }
+  @keyframes kenBurns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.12) translate(-1.5%, -1%); } }
+  @keyframes lightDrift { 0% { opacity: 0.6; transform: translate(0, 0); } 100% { opacity: 1; transform: translate(3%, 2%); } }
+  .hero-side-mark { position: absolute; left: 32px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); opacity: 0.65; white-space: nowrap; z-index: 4; }
+  .hero-cinema-inner { position: relative; height: 100%; max-width: 1320px; margin: 0 auto; padding: 0 48px; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 100px; z-index: 3; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.45em; color: var(--accent-soft); margin-bottom: 36px; opacity: 0; animation: fadeUp 1.4s ease 0.3s forwards; }
   .hero-eyebrow::before { content: ''; width: 56px; height: 1px; background: var(--accent-soft); }
   .hero-cinema h1 { font-family: var(--display); font-weight: 300; font-size: clamp(70px, 12vw, 196px); line-height: 0.9; letter-spacing: -0.035em; color: var(--cream-on-dark); max-width: 1200px; opacity: 0; animation: fadeUp 1.6s ease 0.6s forwards; text-shadow: 0 4px 40px rgba(0,0,0,0.4); }
@@ -75,7 +86,7 @@
   .hero-status-label { font-size: 9.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.45em; color: var(--cream-soft); margin-bottom: 8px; }
   .hero-status-line { font-family: var(--display); font-size: 24px; font-weight: 400; color: var(--cream-on-dark); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
   .hero-status-line em { font-style: italic; color: var(--accent-soft); }
-  .hero-corner-mark { position: absolute; top: 140px; right: 48px; text-align: right; font-family: var(--display); color: var(--cream-soft); opacity: 0; animation: fadeUp 1.4s ease 1.4s forwards; z-index: 3; }
+  .hero-corner-mark { position: absolute; top: 140px; right: 48px; text-align: right; font-family: var(--display); color: var(--cream-soft); opacity: 0; animation: fadeUp 1.4s ease 1.4s forwards; z-index: 4; }
   .hero-corner-mark .mmxxvi { font-size: 16px; letter-spacing: 0.5em; color: var(--accent-soft); }
   .hero-corner-mark .est-label { font-family: var(--body); font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); margin-top: 6px; }
 
@@ -253,6 +264,28 @@
   .footer-col a:hover { color: var(--accent); }
   .footer-bottom { border-top: 1px solid var(--line); padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
 
+  /* PRELOADER */
+  .preloader { position: fixed; inset: 0; z-index: 9999; background: var(--dark); display: flex; align-items: center; justify-content: center; flex-direction: column; transition: opacity 0.8s ease, visibility 0.8s ease; }
+  .preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+  .preloader-monogram { width: 72px; height: 72px; border: 1px solid var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 32px; color: var(--accent); opacity: 0; animation: preloaderIn 1s ease 0.1s forwards; }
+  .preloader-bar { width: 120px; height: 1px; background: var(--line-dark); margin-top: 28px; position: relative; overflow: hidden; opacity: 0; animation: preloaderIn 0.6s ease 0.3s forwards; }
+  .preloader-bar::after { content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 0; background: var(--accent); animation: preloaderFill 1.2s ease 0.4s forwards; }
+  @keyframes preloaderIn { to { opacity: 1; } }
+  @keyframes preloaderFill { to { width: 100%; } }
+
+  /* SCROLL REVEALS */
+  .reveal { opacity: 0; transform: translateY(48px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.12s; }
+  .reveal-delay-2 { transition-delay: 0.24s; }
+  .reveal-delay-3 { transition-delay: 0.36s; }
+
+  /* GALLERY HOVER ENHANCEMENTS */
+  .gallery-tile .tile-caption { transform: translateY(8px); opacity: 0.85; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease; }
+  .gallery-tile:hover .tile-caption { transform: translateY(0); opacity: 1; }
+  .gallery-tile::before { content: ''; position: absolute; inset: 0; z-index: 1; border: 0px solid var(--accent-soft); opacity: 0; transition: all 0.6s ease; }
+  .gallery-tile:hover::before { border-width: 3px; opacity: 0.4; }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 860px) {
@@ -302,6 +335,11 @@
 </head>
 <body>
 
+<div class="preloader" id="preloader">
+  <div class="preloader-monogram">H</div>
+  <div class="preloader-bar"></div>
+</div>
+
 <header id="header">
   <div class="container nav">
     <a href="#" class="logo-block">
@@ -324,6 +362,7 @@
 
 <!-- HERO -->
 <section class="hero-cinema">
+  <div class="hero-light"></div>
   <div class="hero-side-mark">Hillcrest · Dehradun · Doon Valley</div>
   <div class="hero-corner-mark">
     <div class="mmxxvi">MMXXVI</div>
@@ -346,7 +385,7 @@
 <!-- I · THE PROJECT -->
 <section class="project" id="project">
   <div class="container">
-    <div class="project-header">
+    <div class="project-header reveal">
       <div class="roman">I · The Project</div>
       <h2>Where the hills meet <em>the city</em></h2>
     </div>
@@ -371,7 +410,7 @@
 
 <!-- II · PULL QUOTE -->
 <section class="pull-quote">
-  <div class="pull-quote-inner">
+  <div class="pull-quote-inner reveal">
     <div class="roman">II · Our Promise</div>
     <blockquote>"We don't sell homes — we build <em>trust</em>. The finish speaks. The families stay. And now, we're ready to do it again."</blockquote>
     <cite>Urban Estates · Dehradun</cite>
@@ -380,35 +419,35 @@
 
 <!-- III · RESIDENCES GALLERY -->
 <section class="gallery" id="gallery">
-  <div class="gallery-header">
+  <div class="gallery-header reveal">
     <div class="roman">III · The Residences</div>
     <h2 class="gallery-title">What we <em>delivered</em></h2>
     <div class="gallery-line"></div>
     <div class="gallery-caption">Every detail as handed over — HD photography from the completed project.</div>
   </div>
   <div class="gallery-grid">
-    <div class="gallery-tile tile-1">
+    <div class="gallery-tile tile-1 reveal">
       <img src="hd/sel-villas-mountains-panorama.jpg" alt="Panoramic drone view of Hillcrest villas nestled in the Shivalik mountains" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. I · The Setting</span><em>Stone, wood, mountains, home</em></div>
     </div>
-    <div class="gallery-tile tile-2">
+    <div class="gallery-tile tile-2 reveal reveal-delay-1">
       <img src="hd/living-fireplace.jpg" alt="Living room with stone fireplace, chandelier, and balcony view" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. II · The Fireplace</span><em>Stone hearth, candlelight, evening</em></div>
     </div>
-    <div class="gallery-tile tile-3">
+    <div class="gallery-tile tile-3 reveal">
       <img src="hd/living-premium.jpg" alt="Premium living room with marble counter, Buddha statue, and designer decor" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. III · The Living</span><em>Marble, amber, quiet luxury</em></div>
     </div>
-    <div class="gallery-tile tile-4">
+    <div class="gallery-tile tile-4 reveal reveal-delay-1">
       <img src="hd/bedroom-premium.jpg" alt="Master bedroom with leather headboard, wood beam ceiling, ambient lighting" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. IV · The Master Suite</span><em>Warmth, wood, silence</em></div>
     </div>
-    <div class="gallery-tile tile-5">
+    <div class="gallery-tile tile-5 reveal reveal-delay-2">
       <img src="hd/sel-villas-car-driveway.jpg" alt="Hillcrest villas with car in driveway and mountains in the background" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. V · The Arrival</span><em>Your private entrance, lit at dusk</em></div>
     </div>
   </div>
-  <div class="gallery-footer">
+  <div class="gallery-footer reveal">
     <div class="ornament">&#9670; &#9670; &#9670;</div>
     <p>Every home delivered exactly as promised. Not a compromise, not a shortcut — just craft.</p>
   </div>
@@ -417,7 +456,7 @@
 <!-- IV · VIDEO REELS -->
 <section class="reels" id="reels">
   <div class="container">
-    <div class="reels-header">
+    <div class="reels-header reveal">
       <div class="roman">IV · Films</div>
       <h2>From the <em>ground</em>.</h2>
       <p>Walk-throughs, aerials, and quiet moments — captured from the site.</p>
@@ -470,13 +509,13 @@
 <!-- V · EDITORIAL HIGHLIGHTS -->
 <section class="highlights" id="highlights">
   <div class="container">
-    <div class="highlights-header">
+    <div class="highlights-header reveal">
       <div class="roman">V · The Standard</div>
       <h2>Built to <em>last</em>.</h2>
       <p>Every finish, every fixture — chosen once, chosen right.</p>
     </div>
     <div class="highlights-grid">
-      <div class="highlight-card">
+      <div class="highlight-card reveal">
         <div class="highlight-img">
           <img src="hd/living-fireplace-wide.jpg" alt="Living room with stone fireplace, cane chairs, and chandelier" loading="lazy">
         </div>
@@ -484,7 +523,7 @@
         <h3>Stone Hearth, Candlelight, Evening</h3>
         <p>Natural stone fireplace, handpicked furniture, Italian marble floors. A living room that feels like it's been there for decades — built in months.</p>
       </div>
-      <div class="highlight-card">
+      <div class="highlight-card reveal reveal-delay-1">
         <div class="highlight-img">
           <img src="hd/sel-balcony-mountain-day.jpg" alt="Private deck with seating overlooking Shivalik mountains by day" loading="lazy">
         </div>
@@ -492,7 +531,7 @@
         <h3>City Lights from Your Private Deck</h3>
         <p>Every villa comes with a private balcony that faces the valley. Mountains by day, the glowing city by night — all from your armchair.</p>
       </div>
-      <div class="highlight-card">
+      <div class="highlight-card reveal reveal-delay-2">
         <div class="highlight-img">
           <img src="hd/pergola-city-dusk.jpg" alt="Garden pergola at dusk with city lights in the distance" loading="lazy">
         </div>
@@ -507,7 +546,7 @@
 <!-- VI · NEW PROJECT -->
 <section class="next-project" id="next">
   <div class="container">
-    <div class="next-inner">
+    <div class="next-inner reveal">
       <div class="roman">VI · What's Next</div>
       <h2>A new chapter <em>begins</em>.</h2>
       <p class="next-lead">Hillcrest proved what we stand for — quality, honesty, and delivery. Now we're bringing that same standard to a new MDDA approved plotting project in Dehradun. The land is secured, the approvals are in place, and the details are being finalized.</p>
@@ -565,7 +604,7 @@
 <!-- VIII · INSTAGRAM -->
 <section class="instagram" id="instagram">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2 class="section-title">From the <em>feed</em></h2>
       <div class="section-line"></div>
       <a href="https://instagram.com/uestates_" target="_blank" rel="noopener" class="ig-handle">@uestates_ &#8594;</a>
@@ -598,7 +637,7 @@
   <div class="reserve-bg">
     <img src="hd/sel-drone-sunset-pink.jpg" alt="Hillcrest villas at sunset">
   </div>
-  <div class="reserve-inner">
+  <div class="reserve-inner reveal">
     <div class="roman">IX · Enquire</div>
     <h2>Let's <em>talk</em>.</h2>
     <p class="reserve-sub">Hillcrest is sold out — but our next project is around the corner. Be the first to know.</p>
@@ -651,10 +690,27 @@
 
 <script>
   const header = document.getElementById('header');
+  const heroBg = document.querySelector('.hero-cinema::before') ? null : document.querySelector('.hero-cinema');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 60) header.classList.add('scrolled');
     else header.classList.remove('scrolled');
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      const bg = document.querySelector('.hero-cinema');
+      if (bg) bg.style.setProperty('--parallax', y * 0.35 + 'px');
+    }
+  }, { passive: true });
+
+  // Preloader
+  window.addEventListener('load', () => {
+    setTimeout(() => document.getElementById('preloader').classList.add('done'), 1600);
   });
+
+  // Scroll reveals
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
   function toggleReel(card) {
     const video = card.querySelector('video');
