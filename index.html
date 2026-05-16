@@ -8,9 +8,9 @@
 <meta property="og:title" content="Hillcrest — Luxury Hilltop Villas | Urban Estates Dehradun" />
 <meta property="og:description" content="Where the hills meet the city. All villas sold — new MDDA approved project arriving soon." />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://hillcrestdehradun.com/hd/sel-villas-mountains-panorama.jpg" />
-<meta property="og:image:width" content="1260" />
-<meta property="og:image:height" content="840" />
+<meta property="og:image" content="https://hillcrestdehradun.com/hd/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://hillcrestdehradun.com" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F2EEE5' stroke='%23A88752' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23A88752'%3EH%3C/text%3E%3C/svg%3E">
 
@@ -280,6 +280,33 @@
   .reveal-delay-2 { transition-delay: 0.24s; }
   .reveal-delay-3 { transition-delay: 0.36s; }
 
+  /* CINEMATIC LETTERBOX */
+  .hero-cinema .letterbox-top,
+  .hero-cinema .letterbox-bottom { position: absolute; left: 0; right: 0; height: 8vh; z-index: 2; pointer-events: none; }
+  .hero-cinema .letterbox-top { top: 0; background: linear-gradient(180deg, rgba(15,20,16,0.6) 0%, transparent 100%); }
+  .hero-cinema .letterbox-bottom { bottom: 0; background: linear-gradient(0deg, rgba(15,20,16,0.7) 0%, transparent 100%); }
+
+  /* PARALLAX SECTIONS */
+  .parallax-img { transition: transform 0.1s linear; will-change: transform; }
+
+  /* SCROLL-LINKED ZOOM */
+  .zoom-on-scroll img { transition: transform 1.8s cubic-bezier(0.16,1,0.3,1); }
+  .zoom-on-scroll.in-view img { transform: scale(1.04); }
+
+  /* GOLDEN PARTICLES */
+  .hero-particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden; }
+  .hero-particle { position: absolute; width: 3px; height: 3px; background: var(--accent-soft); border-radius: 50%; opacity: 0; animation: particleFloat linear infinite; }
+  @keyframes particleFloat {
+    0% { opacity: 0; transform: translateY(100vh) translateX(0); }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.5; }
+    100% { opacity: 0; transform: translateY(-20vh) translateX(40px); }
+  }
+
+  /* WORD-BY-WORD TEXT REVEAL */
+  .word-reveal .word { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+  .word-reveal.visible .word { opacity: 1; transform: translateY(0); }
+
   /* GALLERY HOVER ENHANCEMENTS */
   .gallery-tile .tile-caption { transform: translateY(8px); opacity: 0.85; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.5s ease; }
   .gallery-tile:hover .tile-caption { transform: translateY(0); opacity: 1; }
@@ -362,6 +389,9 @@
 
 <!-- HERO -->
 <section class="hero-cinema">
+  <div class="letterbox-top"></div>
+  <div class="letterbox-bottom"></div>
+  <div class="hero-particles" id="heroParticles"></div>
   <div class="hero-light"></div>
   <div class="hero-side-mark">Hillcrest · Dehradun · Doon Valley</div>
   <div class="hero-corner-mark">
@@ -387,7 +417,7 @@
   <div class="container">
     <div class="project-header reveal">
       <div class="roman">I · The Project</div>
-      <h2>Where the hills meet <em>the city</em></h2>
+      <h2 class="word-reveal">Where the hills meet <em>the city</em></h2>
     </div>
     <div class="project-inner">
       <div>
@@ -421,28 +451,28 @@
 <section class="gallery" id="gallery">
   <div class="gallery-header reveal">
     <div class="roman">III · The Residences</div>
-    <h2 class="gallery-title">What we <em>delivered</em></h2>
+    <h2 class="gallery-title word-reveal">What we <em>delivered</em></h2>
     <div class="gallery-line"></div>
     <div class="gallery-caption">Every detail as handed over — HD photography from the completed project.</div>
   </div>
   <div class="gallery-grid">
-    <div class="gallery-tile tile-1 reveal">
+    <div class="gallery-tile tile-1 reveal zoom-on-scroll">
       <img src="hd/sel-villas-mountains-panorama.jpg" alt="Panoramic drone view of Hillcrest villas nestled in the Shivalik mountains" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. I · The Setting</span><em>Stone, wood, mountains, home</em></div>
     </div>
-    <div class="gallery-tile tile-2 reveal reveal-delay-1">
+    <div class="gallery-tile tile-2 reveal reveal-delay-1 zoom-on-scroll">
       <img src="hd/living-fireplace.jpg" alt="Living room with stone fireplace, chandelier, and balcony view" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. II · The Fireplace</span><em>Stone hearth, candlelight, evening</em></div>
     </div>
-    <div class="gallery-tile tile-3 reveal">
+    <div class="gallery-tile tile-3 reveal zoom-on-scroll">
       <img src="hd/living-premium.jpg" alt="Premium living room with marble counter, Buddha statue, and designer decor" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. III · The Living</span><em>Marble, amber, quiet luxury</em></div>
     </div>
-    <div class="gallery-tile tile-4 reveal reveal-delay-1">
+    <div class="gallery-tile tile-4 reveal reveal-delay-1 zoom-on-scroll">
       <img src="hd/bedroom-premium.jpg" alt="Master bedroom with leather headboard, wood beam ceiling, ambient lighting" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. IV · The Master Suite</span><em>Warmth, wood, silence</em></div>
     </div>
-    <div class="gallery-tile tile-5 reveal reveal-delay-2">
+    <div class="gallery-tile tile-5 reveal reveal-delay-2 zoom-on-scroll">
       <img src="hd/sel-villas-car-driveway.jpg" alt="Hillcrest villas with car in driveway and mountains in the background" loading="lazy">
       <div class="tile-caption"><span class="tile-caption-num">No. V · The Arrival</span><em>Your private entrance, lit at dusk</em></div>
     </div>
@@ -458,7 +488,7 @@
   <div class="container">
     <div class="reels-header reveal">
       <div class="roman">IV · Films</div>
-      <h2>From the <em>ground</em>.</h2>
+      <h2 class="word-reveal">From the <em>ground</em>.</h2>
       <p>Walk-throughs, aerials, and quiet moments — captured from the site.</p>
     </div>
     <div class="reels-grid">
@@ -511,11 +541,11 @@
   <div class="container">
     <div class="highlights-header reveal">
       <div class="roman">V · The Standard</div>
-      <h2>Built to <em>last</em>.</h2>
+      <h2 class="word-reveal">Built to <em>last</em>.</h2>
       <p>Every finish, every fixture — chosen once, chosen right.</p>
     </div>
     <div class="highlights-grid">
-      <div class="highlight-card reveal">
+      <div class="highlight-card reveal zoom-on-scroll">
         <div class="highlight-img">
           <img src="hd/living-fireplace-wide.jpg" alt="Living room with stone fireplace, cane chairs, and chandelier" loading="lazy">
         </div>
@@ -523,7 +553,7 @@
         <h3>Stone Hearth, Candlelight, Evening</h3>
         <p>Natural stone fireplace, handpicked furniture, Italian marble floors. A living room that feels like it's been there for decades — built in months.</p>
       </div>
-      <div class="highlight-card reveal reveal-delay-1">
+      <div class="highlight-card reveal reveal-delay-1 zoom-on-scroll">
         <div class="highlight-img">
           <img src="hd/sel-balcony-mountain-day.jpg" alt="Private deck with seating overlooking Shivalik mountains by day" loading="lazy">
         </div>
@@ -531,7 +561,7 @@
         <h3>City Lights from Your Private Deck</h3>
         <p>Every villa comes with a private balcony that faces the valley. Mountains by day, the glowing city by night — all from your armchair.</p>
       </div>
-      <div class="highlight-card reveal reveal-delay-2">
+      <div class="highlight-card reveal reveal-delay-2 zoom-on-scroll">
         <div class="highlight-img">
           <img src="hd/pergola-city-dusk.jpg" alt="Garden pergola at dusk with city lights in the distance" loading="lazy">
         </div>
@@ -548,7 +578,7 @@
   <div class="container">
     <div class="next-inner reveal">
       <div class="roman">VI · What's Next</div>
-      <h2>A new chapter <em>begins</em>.</h2>
+      <h2 class="word-reveal">A new chapter <em>begins</em>.</h2>
       <p class="next-lead">Hillcrest proved what we stand for — quality, honesty, and delivery. Now we're bringing that same standard to a new MDDA approved plotting project in Dehradun. The land is secured, the approvals are in place, and the details are being finalized.</p>
       <div class="next-features">
         <div class="nf">
@@ -690,27 +720,79 @@
 
 <script>
   const header = document.getElementById('header');
-  const heroBg = document.querySelector('.hero-cinema::before') ? null : document.querySelector('.hero-cinema');
+  const heroEl = document.querySelector('.hero-cinema');
+
+  // Parallax depth — hero bg moves slower, sections with images get subtle shift
+  const parallaxSections = document.querySelectorAll('.highlight-img, .reserve-bg');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
     const y = window.scrollY;
+    if (y > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
     if (y < window.innerHeight) {
-      const bg = document.querySelector('.hero-cinema');
-      if (bg) bg.style.setProperty('--parallax', y * 0.35 + 'px');
+      heroEl.style.setProperty('--parallax', y * 0.35 + 'px');
     }
+    parallaxSections.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        const offset = (rect.top - window.innerHeight / 2) * 0.06;
+        el.querySelector('img').style.transform = 'translateY(' + offset + 'px) scale(1.08)';
+      }
+    });
   }, { passive: true });
 
-  // Preloader
-  window.addEventListener('load', () => {
-    setTimeout(() => document.getElementById('preloader').classList.add('done'), 1600);
-  });
+  // Preloader — dismiss on load OR force after 5s for slow connections
+  function dismissPreloader() {
+    const p = document.getElementById('preloader');
+    if (!p.classList.contains('done')) p.classList.add('done');
+  }
+  window.addEventListener('load', () => setTimeout(dismissPreloader, 1600));
+  setTimeout(dismissPreloader, 5000);
 
   // Scroll reveals
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Scroll-linked zoom
+  const zoomObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('in-view');
+      else e.target.classList.remove('in-view');
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.zoom-on-scroll').forEach(el => zoomObserver.observe(el));
+
+  // Word-by-word text reveal
+  document.querySelectorAll('.word-reveal').forEach(el => {
+    const html = el.innerHTML;
+    const wrapped = html.replace(/(\S+)/g, (match) => {
+      return '<span class="word">' + match + '</span>';
+    });
+    el.innerHTML = wrapped;
+    el.querySelectorAll('.word').forEach((w, i) => {
+      w.style.transitionDelay = (i * 0.07) + 's';
+    });
+  });
+  const wordObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); wordObserver.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.word-reveal').forEach(el => wordObserver.observe(el));
+
+  // Golden particles
+  (function createParticles() {
+    const container = document.getElementById('heroParticles');
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.className = 'hero-particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animationDuration = (8 + Math.random() * 12) + 's';
+      p.style.animationDelay = (Math.random() * 10) + 's';
+      p.style.width = (2 + Math.random() * 2) + 'px';
+      p.style.height = p.style.width;
+      container.appendChild(p);
+    }
+  })();
 
   function toggleReel(card) {
     const video = card.querySelector('video');
