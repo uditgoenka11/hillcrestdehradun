@@ -12,6 +12,10 @@
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:url" content="https://hillcrestdehradun.com" />
+<link rel="canonical" href="https://hillcrestdehradun.com">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hillcrest — Luxury Hilltop Villas | Urban Estates Dehradun">
+<meta name="twitter:image" content="https://hillcrestdehradun.com/hd/og-image.jpg">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F2EEE5' stroke='%23A88752' stroke-width='2'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23A88752'%3EH%3C/text%3E%3C/svg%3E">
 
 <link rel="preload" as="image" href="hd/hero.jpg">
@@ -26,17 +30,17 @@
     --bg-2: #ECE6D8;
     --surface: #E5DDCC;
     --ink: #1A1714;
-    --ink-soft: #2A2520;
+    --ink-soft: #2A2520; /* reserved */
     --dark: #0C0A08;
     --dark-2: #161210;
     --cream-on-dark: #E8DCC4;
     --cream-soft: #C5BBA5;
     --muted: #6B655C;
-    --muted-on-dark: #8B8676;
+    --muted-on-dark: #9C958A;
     --line: #CFC6B4;
-    --line-soft: #DDD4C0;
+    --line-soft: #DDD4C0; /* reserved */
     --line-dark: #2A2420;
-    --accent: #A88752;
+    --accent: #8B6F3F;
     --accent-soft: #C9A961;
     --display: 'Cormorant Garamond', 'Times New Roman', serif;
     --body: 'Manrope', system-ui, sans-serif;
@@ -70,8 +74,7 @@
   header.scrolled .nav-cta { border: 1px solid var(--line); }
 
   /* HERO */
-  .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: var(--dark); }
-  .hero-cinema { --parallax: 0px; }
+  .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: var(--dark); --parallax: 0px; }
   .hero-cinema::before { content: ''; position: absolute; inset: -60px 0 0 0; background: url('hd/hero.jpg') center/cover no-repeat; animation: kenBurns 25s ease-in-out infinite alternate; transform: translateY(var(--parallax)); will-change: transform; }
   .hero-cinema::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(12,10,8,0.25) 0%, rgba(12,10,8,0.45) 40%, rgba(12,10,8,0.78) 100%); z-index: 1; }
   .hero-light { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(201,169,97,0.12) 0%, transparent 70%); animation: lightDrift 12s ease-in-out infinite alternate; }
@@ -92,12 +95,6 @@
   .hero-corner-mark { position: absolute; top: 140px; right: 48px; text-align: right; font-family: var(--display); color: var(--cream-soft); opacity: 0; animation: fadeUp 1.4s ease 1.4s forwards; z-index: 4; }
   .hero-corner-mark .mmxxvi { font-size: 16px; letter-spacing: 0.5em; color: var(--accent-soft); }
   .hero-corner-mark .est-label { font-family: var(--body); font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); margin-top: 6px; }
-
-  /* PHASE STRIP */
-  .phase-strip { background: var(--dark); color: var(--cream-on-dark); padding: 24px 0; overflow: hidden; white-space: nowrap; border-top: 1px solid var(--accent); border-bottom: 1px solid var(--line-dark); }
-  .phase-track { display: inline-block; animation: scroll 55s linear infinite; font-family: var(--display); font-size: 22px; font-style: italic; font-weight: 300; }
-  .phase-track span { margin: 0 32px; color: var(--accent-soft); font-style: normal; font-size: 14px; }
-  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
   /* PROJECT */
   .project { padding: 180px 0; background: var(--bg); }
@@ -344,7 +341,6 @@
     .hero-side-mark, .hero-corner-mark { display: none; }
     .hero-bottom-row { grid-template-columns: 1fr; gap: 28px; }
     .hero-status { text-align: left; }
-    .phase-track { font-size: 17px; }
     .project { padding: 100px 0; }
     .project-header { margin-bottom: 60px; }
     .project-inner { grid-template-columns: 1fr; gap: 48px; }
@@ -377,6 +373,16 @@
     .reserve-form { padding: 36px 24px; }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
   }
+
+  /* FOCUS */
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  header.scrolled :focus-visible { outline-color: var(--accent); }
+
+  /* REDUCED MOTION */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    .hero-particles { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -403,20 +409,20 @@
       <li><a href="#contact">Enquire</a></li>
     </ul>
     <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20upcoming%20Urban%20Estates%20project.%20Please%20share%20details." class="nav-cta">Enquire Now</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<div class="mobile-overlay" id="mobileOverlay">
+<nav class="mobile-overlay" id="mobileOverlay" aria-hidden="true">
   <a href="#project" onclick="closeMenu()">The <em>Villas</em></a>
   <a href="#gallery" onclick="closeMenu()">The <em>Residences</em></a>
   <a href="#reels" onclick="closeMenu()">The <em>Films</em></a>
   <a href="#next" onclick="closeMenu()">What's <em>Next</em></a>
   <a href="#location" onclick="closeMenu()">Find <em>Us</em></a>
   <a href="#contact" onclick="closeMenu()">Enquire <em>Now</em></a>
-</div>
+</nav>
 
 <!-- HERO -->
 <section class="hero-cinema">
@@ -426,8 +432,8 @@
   <div class="hero-light"></div>
   <div class="hero-side-mark">Hillcrest · Dehradun · Doon Valley</div>
   <div class="hero-corner-mark">
-    <div class="mmxxvi">MMXXVI</div>
-    <div class="est-label">Urban Estates</div>
+    <div class="mmxxvi">MMXXIV</div>
+    <div class="est-label">Est. · Urban Estates</div>
   </div>
   <div class="hero-cinema-inner">
     <div class="hero-eyebrow">Dehradun · Sahastradhara · Doon Valley</div>
@@ -448,7 +454,7 @@
   <div class="container">
     <div class="project-header reveal">
       <div class="roman">I · The Project</div>
-      <h2 class="word-reveal">Where the hills meet <em>the city</em></h2>
+      <h2 class="word-reveal">Where the hills meet <em>the city.</em></h2>
     </div>
     <div class="project-inner">
       <div>
@@ -482,7 +488,7 @@
 <section class="gallery" id="gallery">
   <div class="gallery-header reveal">
     <div class="roman">III · The Residences</div>
-    <h2 class="gallery-title word-reveal">What we <em>delivered</em></h2>
+    <h2 class="gallery-title word-reveal">What we <em>delivered.</em></h2>
     <div class="gallery-line"></div>
     <div class="gallery-caption">Every detail as handed over — HD photography from the completed project.</div>
   </div>
@@ -523,7 +529,7 @@
       <p>Walk-throughs, aerials, and quiet moments — captured from the site.</p>
     </div>
     <div class="reels-grid">
-      <div class="reel-card" onclick="toggleReel(this)">
+      <div class="reel-card" role="button" tabindex="0" onclick="toggleReel(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleReel(this)}">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-1.jpg">
           <source src="hd/reel-01-approach.mp4" type="video/mp4">
         </video>
@@ -533,7 +539,7 @@
           <div class="reel-caption-title">The Approach</div>
         </div>
       </div>
-      <div class="reel-card" onclick="toggleReel(this)">
+      <div class="reel-card" role="button" tabindex="0" onclick="toggleReel(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleReel(this)}">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-2.jpg">
           <source src="hd/reel-02-interior.mp4" type="video/mp4">
         </video>
@@ -543,7 +549,7 @@
           <div class="reel-caption-title">Inside the Villa</div>
         </div>
       </div>
-      <div class="reel-card" onclick="toggleReel(this)">
+      <div class="reel-card" role="button" tabindex="0" onclick="toggleReel(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleReel(this)}">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-3.jpg">
           <source src="hd/reel-03-valley.mp4" type="video/mp4">
         </video>
@@ -553,7 +559,7 @@
           <div class="reel-caption-title">The Valley View</div>
         </div>
       </div>
-      <div class="reel-card" onclick="toggleReel(this)">
+      <div class="reel-card" role="button" tabindex="0" onclick="toggleReel(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleReel(this)}">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-4.jpg">
           <source src="hd/reel-04-sunset.mp4" type="video/mp4">
         </video>
@@ -597,7 +603,7 @@
           <img src="hd/pergola-city-dusk.jpg" alt="Garden pergola at dusk with city lights in the distance" loading="lazy">
         </div>
         <div class="highlight-meta">No. 03 · The Grounds</div>
-        <h3>In the Hills, Never Far</h3>
+        <h3>Fifteen Minutes to Everything</h3>
         <p>Private pergola, manicured lawn, garden pathways — and the city just fifteen minutes away. Every amenity at arm's reach.</p>
       </div>
     </div>
@@ -610,7 +616,7 @@
     <div class="next-inner reveal">
       <div class="roman">VI · What's Next</div>
       <h2 class="word-reveal">A new chapter <em>begins</em>.</h2>
-      <p class="next-lead">Hillcrest proved what we stand for — quality, honesty, and delivery. Now we're bringing that same standard to a new MDDA approved plotting project in Dehradun. The land is secured, the approvals are in place, and the details are being finalized.</p>
+      <p class="next-lead">Hillcrest proved what we stand for — quality, honesty, and delivery. Now we're bringing that same standard to a new MDDA Approved plotting project in Dehradun. The land is secured, the approvals are in place, and the details are being finalized.</p>
       <div class="next-features">
         <div class="nf">
           <div class="nf-title"><em>MDDA</em> Approved</div>
@@ -636,11 +642,11 @@
   <div class="container">
     <div class="location-header reveal">
       <div class="roman">VII · Find Us</div>
-      <h2>Where we <em>are</em></h2>
+      <h2>Where we <em>are.</em></h2>
     </div>
     <div class="location-grid">
       <div class="location-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d78.0425!3d30.3785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d700695c38c1%3A0x4f9be5d389a1c1ff!2sHill%20Crest%20Dehradun%20%E2%80%93%20Luxury%20Hilltop%20Villas%20%7C%20MDDA%20Approved%20Gated%20Community!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d78.0425!3d30.3785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d700695c38c1%3A0x4f9be5d389a1c1ff!2sHill%20Crest%20Dehradun%20%E2%80%93%20Luxury%20Hilltop%20Villas%20%7C%20MDDA%20Approved%20Gated%20Community!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" title="Google Maps showing Hillcrest location in Dehradun" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="location-details">
         <div class="loc-card">
@@ -721,12 +727,12 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Hillcrest · Sold Out</h4>
-        <p>3BHK luxury villas in Sahastradhara — all villas sold. Thank you for the trust.</p>
+        <p>3 BHK luxury villas in Sahastradhara — all villas sold. Thank you for the trust.</p>
       </div>
       <div class="footer-col">
         <h4>New Project · Coming Soon</h4>
         <p>MDDA approved plots in Dehradun.</p>
-        <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20new%20Urban%20Estates%20project.">Get early access</a>
+        <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20new%20Urban%20Estates%20project.">Get Early Access</a>
       </div>
       <div class="footer-col">
         <h4>Visit</h4>
@@ -764,12 +770,12 @@
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom > 0) {
         const offset = (rect.top - window.innerHeight / 2) * 0.06;
-        el.querySelector('img').style.transform = 'translateY(' + offset + 'px) scale(1.08)';
+        el.style.transform = 'translateY(' + offset + 'px)';
       }
     });
   }, { passive: true });
 
-  // Preloader — dismiss on load OR force after 5s for slow connections
+  // Preloader — dismiss on load OR force after 2.2s for slow connections
   function dismissPreloader() {
     const p = document.getElementById('preloader');
     if (!p.classList.contains('done')) p.classList.add('done');
@@ -840,12 +846,17 @@
   menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
     mobileOverlay.classList.toggle('open');
-    document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
+    const isOpen = mobileOverlay.classList.contains('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    mobileOverlay.setAttribute('aria-hidden', !isOpen);
   });
   function closeMenu() {
     menuToggle.classList.remove('active');
     mobileOverlay.classList.remove('open');
     document.body.style.overflow = '';
+    menuToggle.setAttribute('aria-expanded', 'false');
+    mobileOverlay.setAttribute('aria-hidden', 'true');
   }
 
   function toggleReel(card) {
@@ -858,7 +869,7 @@
         c.querySelector('video').pause();
         c.classList.remove('playing');
       });
-      video.play();
+      video.play().catch(() => {});
       card.classList.add('playing');
     }
   }
