@@ -73,7 +73,7 @@
   .hero-cinema { --parallax: 0px; }
   .hero-cinema::before { content: ''; position: absolute; inset: -60px 0 0 0; background: url('hd/hero.jpg') center/cover no-repeat; animation: kenBurns 25s ease-in-out infinite alternate; transform: translateY(var(--parallax)); will-change: transform; }
   .hero-cinema::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(15,20,16,0.25) 0%, rgba(15,20,16,0.45) 40%, rgba(15,20,16,0.78) 100%); z-index: 1; }
-  .hero-light { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(201,169,97,0.08) 0%, transparent 70%); animation: lightDrift 12s ease-in-out infinite alternate; }
+  .hero-light { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(201,169,97,0.12) 0%, transparent 70%); animation: lightDrift 12s ease-in-out infinite alternate; }
   @keyframes kenBurns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.12) translate(-1.5%, -1%); } }
   @keyframes lightDrift { 0% { opacity: 0.6; transform: translate(0, 0); } 100% { opacity: 1; transform: translate(3%, 2%); } }
   .hero-side-mark { position: absolute; left: 32px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); opacity: 0.65; white-space: nowrap; z-index: 4; }
