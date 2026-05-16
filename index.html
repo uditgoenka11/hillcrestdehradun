@@ -237,10 +237,8 @@
   .ig-grid a:hover::after { background: rgba(15,20,16,0.15); }
 
   /* CONTACT */
-  .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 48px; }
-  .reserve-bg { position: absolute; inset: 0; z-index: 0; }
-  .reserve-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.22) saturate(0.8); }
-  .reserve-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(rgba(15,20,16,0.5), rgba(15,20,16,0.8)); }
+  .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 48px; background: var(--dark); }
+  .reserve::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(168,135,82,0.08) 0%, transparent 70%); pointer-events: none; }
   .reserve-inner { max-width: 760px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
   .reserve .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 48px; }
   .reserve h2 { font-family: var(--display); font-weight: 300; font-size: clamp(48px, 7vw, 108px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 32px; }
@@ -698,9 +696,6 @@
 
 <!-- IX · ENQUIRE -->
 <section class="reserve" id="contact">
-  <div class="reserve-bg">
-    <img src="hd/sel-drone-sunset-pink.jpg" alt="Hillcrest villas at sunset">
-  </div>
   <div class="reserve-inner reveal">
     <div class="roman">IX · Enquire</div>
     <h2>Let's <em>talk</em>.</h2>
@@ -757,7 +752,7 @@
   const heroEl = document.querySelector('.hero-cinema');
 
   // Parallax depth — hero bg moves slower, sections with images get subtle shift
-  const parallaxSections = document.querySelectorAll('.highlight-img, .reserve-bg');
+  const parallaxSections = document.querySelectorAll('.highlight-img');
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (y > 60) header.classList.add('scrolled');
