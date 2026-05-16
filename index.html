@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hillcrest — Luxury Villas in Dehradun | by Urban Estates</title>
+<meta name="description" content="Hillcrest by Urban Estates — luxury hilltop villas in Dehradun. MDDA approved gated community near Sahastradhara. All villas sold. New plotting project coming soon." />
+<meta property="og:title" content="Hillcrest — Luxury Hilltop Villas | Urban Estates Dehradun" />
+<meta property="og:description" content="Where the hills meet the city. All villas sold — new MDDA approved project arriving soon." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #F2EEE5;
+    --bg-2: #ECE6D8;
+    --surface: #E5DDCC;
+    --ink: #1A1F1A;
+    --ink-soft: #2A3025;
+    --dark: #0F1410;
+    --dark-2: #1A2018;
+    --cream-on-dark: #E8DCC4;
+    --cream-soft: #C5BBA5;
+    --muted: #6B6F5F;
+    --muted-on-dark: #8B8676;
+    --line: #CFC6B4;
+    --line-soft: #DDD4C0;
+    --line-dark: #2D3329;
+    --accent: #A88752;
+    --accent-soft: #C9A961;
+    --display: 'Cormorant Garamond', 'Times New Roman', serif;
+    --body: 'Manrope', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; cursor: default; }
+  body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .container { max-width: 1320px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 2; }
+  .roman { font-family: var(--display); font-weight: 400; font-size: 13px; color: var(--accent); letter-spacing: 0.25em; display: inline-block; padding-bottom: 6px; border-bottom: 1px solid var(--accent); }
+
+  /* HEADER */
+  header { padding: 32px 0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; transition: all 0.6s ease; }
+  header.scrolled { background: rgba(242,238,229,0.94); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; }
+  .logo-block { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+  .monogram { width: 38px; height: 38px; border: 1px solid var(--cream-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 17px; color: var(--cream-on-dark); transition: all 0.5s ease; }
+  header.scrolled .monogram { border-color: var(--ink); color: var(--ink); }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo { font-family: var(--display); font-weight: 500; font-size: 26px; letter-spacing: 0.02em; color: var(--cream-on-dark); transition: color 0.5s ease; }
+  .logo-sub { font-family: var(--body); font-size: 8.5px; font-weight: 500; letter-spacing: 0.4em; color: var(--accent-soft); text-transform: uppercase; margin-top: 7px; transition: color 0.5s ease; }
+  header.scrolled .logo { color: var(--ink); }
+  header.scrolled .logo-sub { color: var(--muted); }
+  .nav-links { display: flex; gap: 40px; list-style: none; }
+  .nav-links a { font-size: 11px; font-weight: 500; color: var(--cream-on-dark); text-decoration: none; text-transform: uppercase; letter-spacing: 0.28em; position: relative; transition: color 0.4s ease; }
+  .nav-links a:hover { color: var(--accent-soft); }
+  header.scrolled .nav-links a { color: var(--ink); }
+  header.scrolled .nav-links a:hover { color: var(--accent); }
+  .nav-cta { display: inline-flex; align-items: center; gap: 10px; padding: 11px 26px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.28em; color: var(--ink); background: var(--cream-on-dark); text-decoration: none; border-radius: 999px; transition: all 0.4s ease; }
+  .nav-cta:hover { background: var(--accent); color: var(--bg); }
+
+  /* HERO */
+  .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: linear-gradient(rgba(15,20,16,0.35), rgba(15,20,16,0.72)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=2200&q=85&auto=format&fit=crop') center/cover, linear-gradient(135deg, #1f2a22, #0F1410); }
+  .hero-side-mark { position: absolute; left: 32px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); opacity: 0.65; white-space: nowrap; z-index: 3; }
+  .hero-cinema-inner { position: relative; height: 100%; max-width: 1320px; margin: 0 auto; padding: 0 48px; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 100px; z-index: 2; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 16px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.45em; color: var(--accent-soft); margin-bottom: 36px; opacity: 0; animation: fadeUp 1.4s ease 0.3s forwards; }
+  .hero-eyebrow::before { content: ''; width: 56px; height: 1px; background: var(--accent-soft); }
+  .hero-cinema h1 { font-family: var(--display); font-weight: 300; font-size: clamp(70px, 12vw, 196px); line-height: 0.9; letter-spacing: -0.035em; color: var(--cream-on-dark); max-width: 1200px; opacity: 0; animation: fadeUp 1.6s ease 0.6s forwards; text-shadow: 0 4px 40px rgba(0,0,0,0.4); }
+  .hero-cinema h1 em { font-style: italic; font-weight: 400; color: var(--accent-soft); }
+  .hero-bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(232,220,196,0.30); align-items: end; opacity: 0; animation: fadeUp 1.6s ease 1s forwards; }
+  .hero-tagline { font-family: var(--display); font-size: 24px; font-style: italic; font-weight: 300; color: var(--cream-on-dark); line-height: 1.45; max-width: 480px; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+  .hero-status { text-align: right; }
+  .hero-status-label { font-size: 9.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.45em; color: var(--cream-soft); margin-bottom: 8px; }
+  .hero-status-line { font-family: var(--display); font-size: 24px; font-weight: 400; color: var(--cream-on-dark); text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+  .hero-status-line em { font-style: italic; color: var(--accent-soft); }
+  .hero-corner-mark { position: absolute; top: 140px; right: 48px; text-align: right; font-family: var(--display); color: var(--cream-soft); opacity: 0; animation: fadeUp 1.4s ease 1.4s forwards; z-index: 3; }
+  .hero-corner-mark .mmxxvi { font-size: 16px; letter-spacing: 0.5em; color: var(--accent-soft); }
+  .hero-corner-mark .est-label { font-family: var(--body); font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--cream-soft); margin-top: 6px; }
+
+  /* PHASE STRIP */
+  .phase-strip { background: var(--dark); color: var(--cream-on-dark); padding: 24px 0; overflow: hidden; white-space: nowrap; border-top: 1px solid var(--accent); border-bottom: 1px solid var(--line-dark); }
+  .phase-track { display: inline-block; animation: scroll 55s linear infinite; font-family: var(--display); font-size: 22px; font-style: italic; font-weight: 300; }
+  .phase-track span { margin: 0 32px; color: var(--accent-soft); font-style: normal; font-size: 14px; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* PROJECT */
+  .project { padding: 180px 0; background: var(--bg); }
+  .project-header { text-align: center; margin-bottom: 100px; }
+  .project-header .roman { margin-bottom: 32px; }
+  .project-header h2 { font-family: var(--display); font-weight: 300; font-size: clamp(38px, 5vw, 64px); line-height: 1.1; letter-spacing: -0.02em; max-width: 840px; margin: 0 auto; }
+  .project-header h2 em { font-style: italic; color: var(--accent); }
+  .project-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 100px; align-items: start; }
+  .project-meta { list-style: none; }
+  .project-meta li { padding: 20px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; font-size: 14px; }
+  .project-meta li:last-child { border-bottom: 1px solid var(--line); }
+  .project-meta li span:first-child { text-transform: uppercase; letter-spacing: 0.22em; font-size: 10.5px; color: var(--muted); font-weight: 500; }
+  .project-meta li span:last-child { font-family: var(--display); font-size: 19px; font-weight: 500; color: var(--ink); }
+  .project-meta li span:last-child em { font-style: italic; color: var(--accent); font-weight: 400; }
+  .project-body p { font-size: 17px; line-height: 1.85; color: var(--ink); margin-bottom: 26px; }
+  .project-body p:nth-child(2) { color: var(--muted); }
+  .project-body p:first-of-type::first-letter { font-family: var(--display); font-size: 64px; font-weight: 400; float: left; line-height: 0.85; margin: 6px 12px 0 0; color: var(--accent); }
+
+  /* PULL QUOTE */
+  .pull-quote { padding: 140px 0; background: var(--bg-2); text-align: center; }
+  .pull-quote-inner { max-width: 980px; margin: 0 auto; padding: 0 48px; }
+  .pull-quote .roman { margin-bottom: 48px; }
+  .pull-quote blockquote { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(32px, 4.5vw, 56px); line-height: 1.25; color: var(--ink); letter-spacing: -0.015em; }
+  .pull-quote blockquote em { color: var(--accent); }
+  .pull-quote cite { display: block; margin-top: 40px; font-family: var(--body); font-style: normal; font-size: 10.5px; letter-spacing: 0.32em; text-transform: uppercase; color: var(--muted); }
+  .pull-quote cite::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--accent); vertical-align: middle; margin-right: 14px; }
+
+  /* GALLERY */
+  .gallery { background: var(--dark); color: var(--cream-on-dark); padding: 160px 0 0; }
+  .gallery-header { max-width: 1320px; margin: 0 auto 100px; padding: 0 48px; display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: end; }
+  .gallery-header .roman { color: var(--accent-soft); border-color: var(--accent-soft); }
+  .gallery-title { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 6vw, 92px); line-height: 1; letter-spacing: -0.025em; color: var(--cream-on-dark); }
+  .gallery-title em { font-style: italic; color: var(--accent-soft); }
+  .gallery-line { height: 1px; background: var(--line-dark); margin-bottom: 22px; }
+  .gallery-caption { font-family: var(--display); font-style: italic; font-size: 17px; color: var(--muted-on-dark); text-align: right; max-width: 260px; line-height: 1.5; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+  .gallery-tile { position: relative; overflow: hidden; background: var(--dark-2); aspect-ratio: 12/7; }
+  .tile-1 { grid-column: 1/4; }
+  .tile-2 { grid-column: 4/7; }
+  .tile-3 { grid-column: 1/3; }
+  .tile-4 { grid-column: 3/5; }
+  .tile-5 { grid-column: 5/7; }
+  .gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.4s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
+  .gallery-tile:hover img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05); }
+  .gallery-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.65)); pointer-events: none; }
+  .tile-caption { position: absolute; bottom: 24px; left: 24px; z-index: 2; font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream-on-dark); }
+  .tile-caption-num { display: block; font-family: var(--body); font-style: normal; font-size: 9px; letter-spacing: 0.4em; color: var(--accent-soft); margin-bottom: 6px; text-transform: uppercase; }
+  .gallery-footer { text-align: center; padding: 120px 32px 160px; }
+  .gallery-footer .ornament { color: var(--accent-soft); font-size: 16px; letter-spacing: 1em; margin-bottom: 40px; }
+  .gallery-footer p { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--cream-on-dark); max-width: 640px; margin: 0 auto; line-height: 1.5; }
+
+  /* VIDEO REELS */
+  .reels { background: var(--bg-2); padding: 160px 0 140px; }
+  .reels-header { text-align: center; margin-bottom: 80px; }
+  .reels-header .roman { margin-bottom: 32px; }
+  .reels-header h2 { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 6vw, 92px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 24px; }
+  .reels-header h2 em { font-style: italic; color: var(--accent); }
+  .reels-header p { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.5; }
+  .reels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .reel-card { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: var(--dark); cursor: pointer; }
+  .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.85); }
+  .reel-card:hover video { transform: scale(1.04); filter: brightness(1); }
+  .reel-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,20,16,0.7)); pointer-events: none; }
+  .reel-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(232,220,196,0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(232,220,196,0.35); display: flex; align-items: center; justify-content: center; z-index: 3; transition: all 0.4s ease; pointer-events: none; opacity: 0; }
+  .reel-card:not(.playing) .reel-play { opacity: 1; }
+  .reel-play::after { content: ''; width: 0; height: 0; border-left: 14px solid var(--cream-on-dark); border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 3px; }
+  .reel-caption { position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 3; }
+  .reel-caption-num { font-family: var(--body); font-size: 9px; letter-spacing: 0.4em; color: var(--accent-soft); text-transform: uppercase; margin-bottom: 6px; }
+  .reel-caption-title { font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream-on-dark); line-height: 1.3; }
+
+  /* HIGHLIGHTS */
+  .highlights { background: var(--bg); padding: 180px 0 140px; }
+  .highlights-header { text-align: center; margin-bottom: 100px; }
+  .highlights-header .roman { margin-bottom: 32px; }
+  .highlights-header h2 { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 6vw, 92px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 24px; }
+  .highlights-header h2 em { font-style: italic; color: var(--accent); }
+  .highlights-header p { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.5; }
+  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .highlight-card { cursor: default; }
+  .highlight-img { aspect-ratio: 4/5; background: var(--surface); overflow: hidden; margin-bottom: 24px; position: relative; }
+  .highlight-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+  .highlight-card:hover .highlight-img img { transform: scale(1.05); }
+  .highlight-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.32em; color: var(--accent); margin-bottom: 10px; font-weight: 500; }
+  .highlight-card h3 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.3; color: var(--ink); margin-bottom: 12px; }
+  .highlight-card p { font-size: 14px; line-height: 1.7; color: var(--muted); }
+
+  /* NEW PROJECT CTA */
+  .next-project { background: var(--dark); color: var(--cream-on-dark); padding: 160px 0; position: relative; overflow: hidden; }
+  .next-project::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(168,135,82,0.08) 0%, transparent 70%); pointer-events: none; }
+  .next-inner { max-width: 920px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+  .next-project .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 48px; }
+  .next-project h2 { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 6vw, 88px); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 40px; }
+  .next-project h2 em { font-style: italic; color: var(--accent-soft); }
+  .next-lead { font-family: var(--display); font-style: italic; font-size: clamp(19px, 2.2vw, 26px); color: var(--cream-soft); line-height: 1.55; max-width: 700px; margin: 0 auto 56px; }
+  .next-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 72px; padding: 56px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+  .nf { text-align: center; }
+  .nf-title { font-family: var(--display); font-size: 24px; font-weight: 400; color: var(--cream-on-dark); margin-bottom: 8px; }
+  .nf-title em { font-style: italic; color: var(--accent-soft); }
+  .nf-text { font-size: 12px; color: var(--muted-on-dark); letter-spacing: 0.15em; text-transform: uppercase; }
+  .next-note { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--muted-on-dark); max-width: 520px; margin: 0 auto 48px; line-height: 1.5; }
+  .next-cta { display: inline-flex; align-items: center; gap: 12px; padding: 20px 44px; font-family: var(--body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.32em; color: var(--dark); background: var(--cream-on-dark); text-decoration: none; border-radius: 999px; transition: all 0.4s ease; }
+  .next-cta:hover { background: var(--accent-soft); transform: translateY(-2px); }
+
+  /* LOCATION */
+  .location { padding: 140px 0; background: var(--bg); border-top: 1px solid var(--line); }
+  .location-header { text-align: center; margin-bottom: 80px; }
+  .location-header .roman { margin-bottom: 32px; }
+  .location-header h2 { font-family: var(--display); font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.1; letter-spacing: -0.02em; }
+  .location-header h2 em { font-style: italic; color: var(--accent); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .location-map { aspect-ratio: 4/3; border-radius: 4px; overflow: hidden; border: 1px solid var(--line); }
+  .location-map iframe { width: 100%; height: 100%; border: 0; filter: saturate(0.6) contrast(1.1); }
+  .location-details { padding: 20px 0; }
+  .loc-card { padding: 28px 0; border-bottom: 1px solid var(--line); }
+  .loc-card:first-child { padding-top: 0; }
+  .loc-card:last-child { border-bottom: none; }
+  .loc-card h4 { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.32em; color: var(--accent); margin-bottom: 14px; }
+  .loc-card p, .loc-card a { font-family: var(--display); font-size: 19px; color: var(--ink); text-decoration: none; line-height: 1.6; display: block; }
+  .loc-card a:hover { color: var(--accent); }
+  .gmb-badge { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding: 8px 18px; background: var(--surface); border-radius: 999px; font-family: var(--body); font-size: 11px; font-weight: 500; color: var(--ink); text-decoration: none; transition: all 0.3s ease; letter-spacing: 0.05em; }
+  .gmb-badge:hover { background: var(--accent); color: var(--bg); }
+
+  /* INSTAGRAM */
+  .instagram { padding: 120px 0; background: var(--bg-2); border-top: 1px solid var(--line); }
+  .section-header { display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: end; margin-bottom: 80px; }
+  .section-title { font-family: var(--display); font-weight: 300; font-size: clamp(36px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.02em; }
+  .section-title em { font-style: italic; color: var(--accent); }
+  .section-line { height: 1px; background: var(--line); margin-bottom: 18px; }
+  .ig-handle { font-size: 11px; color: var(--muted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.28em; font-weight: 500; padding-bottom: 4px; border-bottom: 1px solid var(--ink); transition: color 0.3s ease; white-space: nowrap; }
+  .ig-handle:hover { color: var(--accent); border-color: var(--accent); }
+  .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ig-grid a { display: block; position: relative; aspect-ratio: 1; overflow: hidden; background: var(--surface); }
+  .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .ig-grid a:hover img { transform: scale(1.06); }
+  .ig-grid a::after { content: ''; position: absolute; inset: 0; background: rgba(15,20,16,0); transition: background 0.4s ease; }
+  .ig-grid a:hover::after { background: rgba(15,20,16,0.15); }
+
+  /* CONTACT */
+  .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 32px; }
+  .reserve-bg { position: absolute; inset: 0; z-index: 0; }
+  .reserve-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.22) saturate(0.8); }
+  .reserve-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(rgba(15,20,16,0.5), rgba(15,20,16,0.8)); }
+  .reserve-inner { max-width: 760px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
+  .reserve .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 32px; }
+  .reserve h2 { font-family: var(--display); font-weight: 300; font-size: clamp(48px, 7vw, 108px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 32px; }
+  .reserve h2 em { font-style: italic; color: var(--accent-soft); }
+  .reserve-sub { font-family: var(--display); font-style: italic; font-size: 22px; color: var(--cream-on-dark); max-width: 540px; margin: 0 auto 64px; line-height: 1.55; }
+  .reserve-form { background: rgba(15,20,16,0.55); border: 1px solid rgba(232,220,196,0.18); padding: 56px 48px; border-radius: 2px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+  .reserve-form-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.4em; color: var(--accent-soft); margin-bottom: 28px; }
+  .cta-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .cta { display: inline-flex; align-items: center; gap: 12px; padding: 20px 40px; font-family: var(--body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.32em; text-decoration: none; border-radius: 999px; transition: all 0.4s ease; border: 1px solid transparent; }
+  .cta-primary { background: var(--cream-on-dark); color: var(--dark); }
+  .cta-primary:hover { background: var(--accent-soft); transform: translateY(-2px); }
+  .cta-secondary { background: transparent; color: var(--cream-on-dark); border-color: var(--cream-on-dark); }
+  .cta-secondary:hover { background: var(--cream-on-dark); color: var(--dark); transform: translateY(-2px); }
+  .reserve-note { margin-top: 40px; font-family: var(--display); font-style: italic; font-size: 15px; color: var(--muted-on-dark); }
+
+  /* FOOTER */
+  footer { background: var(--bg); padding: 80px 0 40px; }
+  .footer-top { text-align: center; margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--line); }
+  .footer-monogram { width: 56px; height: 56px; border: 1px solid var(--accent); border-radius: 50%; margin: 0 auto 24px; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-style: italic; font-size: 24px; color: var(--accent); }
+  .footer-name { font-family: var(--display); font-size: 28px; font-weight: 500; margin-bottom: 8px; }
+  .footer-sub { font-size: 10px; text-transform: uppercase; letter-spacing: 0.4em; color: var(--muted); }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  .footer-col h4 { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.32em; color: var(--accent); margin-bottom: 18px; }
+  .footer-col p, .footer-col a { font-family: var(--display); font-size: 17px; color: var(--ink); text-decoration: none; line-height: 1.6; display: block; }
+  .footer-col a:hover { color: var(--accent); }
+  .footer-bottom { border-top: 1px solid var(--line); padding-top: 32px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 11px; color: var(--muted); letter-spacing: 0.1em; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 860px) {
+    .container { padding: 0 24px; }
+    .nav-links { display: none; }
+    .monogram { width: 32px; height: 32px; font-size: 15px; }
+    .logo { font-size: 22px; }
+    .hero-cinema { min-height: 600px; }
+    .hero-cinema-inner { padding: 0 24px 80px; }
+    .hero-side-mark, .hero-corner-mark { display: none; }
+    .hero-bottom-row { grid-template-columns: 1fr; gap: 28px; }
+    .hero-status { text-align: left; }
+    .phase-track { font-size: 17px; }
+    .project { padding: 100px 0; }
+    .project-header { margin-bottom: 60px; }
+    .project-inner { grid-template-columns: 1fr; gap: 48px; }
+    .pull-quote { padding: 80px 0; }
+    .pull-quote-inner { padding: 0 24px; }
+    .gallery { padding: 100px 0 0; }
+    .gallery-header { grid-template-columns: 1fr; gap: 24px; padding: 0 24px; margin-bottom: 60px; }
+    .gallery-line, .gallery-caption { display: none; }
+    .gallery-grid { grid-template-columns: 1fr; gap: 4px; }
+    .tile-1, .tile-2, .tile-3, .tile-4, .tile-5 { grid-column: 1 / -1; }
+    .gallery-tile { aspect-ratio: 12/7; }
+    .gallery-footer { padding: 80px 24px 100px; }
+    .gallery-footer p { font-size: 19px; }
+    .reels { padding: 100px 0 80px; }
+    .reels-header { margin-bottom: 48px; }
+    .reels-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .highlights { padding: 100px 0; }
+    .highlights-header { margin-bottom: 56px; }
+    .highlights-grid { grid-template-columns: 1fr; gap: 40px; }
+    .next-project { padding: 100px 0; }
+    .next-features { grid-template-columns: 1fr; gap: 24px; }
+    .location { padding: 80px 0; }
+    .location-grid { grid-template-columns: 1fr; gap: 32px; }
+    .location-map { aspect-ratio: 16/10; }
+    .instagram { padding: 80px 0; }
+    .section-header { grid-template-columns: 1fr; gap: 20px; margin-bottom: 48px; }
+    .section-line { display: none; }
+    .ig-grid { grid-template-columns: repeat(2, 1fr); }
+    .reserve { padding: 100px 24px; }
+    .reserve-form { padding: 36px 24px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#" class="logo-block">
+      <div class="monogram">H</div>
+      <div class="logo-text">
+        <span class="logo">Hillcrest</span>
+        <span class="logo-sub">By Urban Estates</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#project">Villas</a></li>
+      <li><a href="#gallery">Residences</a></li>
+      <li><a href="#reels">Films</a></li>
+      <li><a href="#next">New Project</a></li>
+      <li><a href="#contact">Enquire</a></li>
+    </ul>
+    <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20upcoming%20Urban%20Estates%20project.%20Please%20share%20details." class="nav-cta">Enquire Now</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-cinema">
+  <div class="hero-side-mark">Hillcrest · Dehradun · Doon Valley</div>
+  <div class="hero-corner-mark">
+    <div class="mmxxvi">MMXXVI</div>
+    <div class="est-label">Urban Estates</div>
+  </div>
+  <div class="hero-cinema-inner">
+    <div class="hero-eyebrow">Dehradun · Sahastradhara · Doon Valley</div>
+    <h1>In the hills,<br><em>never</em> far.</h1>
+    <div class="hero-bottom-row">
+      <p class="hero-tagline">Luxury hilltop villas with every city convenience at your doorstep — and the Shivalik range as your horizon.</p>
+      <div class="hero-status">
+        <div class="hero-status-label">Project Status</div>
+        <div class="hero-status-line">All villas sold · <em>new project arriving soon</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- I · THE PROJECT -->
+<section class="project" id="project">
+  <div class="container">
+    <div class="project-header">
+      <div class="roman">I · The Project</div>
+      <h2>Where the hills meet <em>the city</em></h2>
+    </div>
+    <div class="project-inner">
+      <div>
+        <ul class="project-meta">
+          <li><span>Configuration</span><span>3 BHK · <em>Fully Furnished</em></span></li>
+          <li><span>Type</span><span>Private Gated Villas</span></li>
+          <li><span>Location</span><span>Khurawa, <em>Sahastradhara</em></span></li>
+          <li><span>Approvals</span><span><em>MDDA</em> Approved</span></li>
+          <li><span>Views</span><span>360° <em>Mountain View</em></span></li>
+          <li><span>Status</span><span><em>Sold Out</em></span></li>
+        </ul>
+      </div>
+      <div class="project-body">
+        <p>Hillcrest was built for families who wanted it all — the mountains out every window, the silence of the hills at night, and the city just fifteen minutes down the road. Stone-and-wood villas set into the Shivalik foothills, fully furnished to a standard where nothing is left to add. Schools, hospitals, markets, the airport — all within easy reach. This was never a retreat from life. It was an upgrade.</p>
+        <p>Every villa is now sold. That happened because people walked in, saw the finish, felt the air, looked at the view — and didn't need convincing. We built with honesty, delivered on time, and earned trust the only way that matters: by keeping our word. Thank you to every family that believed in us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- II · PULL QUOTE -->
+<section class="pull-quote">
+  <div class="pull-quote-inner">
+    <div class="roman">II · Our Promise</div>
+    <blockquote>"We don't sell homes — we build <em>trust</em>. The finish speaks. The families stay. And now, we're ready to do it again."</blockquote>
+    <cite>Urban Estates · Dehradun</cite>
+  </div>
+</section>
+
+<!-- III · RESIDENCES GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="gallery-header">
+    <div class="roman">III · The Residences</div>
+    <h2 class="gallery-title">What we <em>delivered</em></h2>
+    <div class="gallery-line"></div>
+    <div class="gallery-caption">Every detail as handed over — HD photography from the completed project.</div>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-tile tile-1">
+      <img src="hd/sel-villas-mountains-panorama.jpg" alt="Panoramic drone view of Hillcrest villas nestled in the Shivalik mountains" loading="lazy">
+      <div class="tile-caption"><span class="tile-caption-num">No. I · The Setting</span><em>Stone, wood, mountains, home</em></div>
+    </div>
+    <div class="gallery-tile tile-2">
+      <img src="hd/living-fireplace.jpg" alt="Living room with stone fireplace, chandelier, and balcony view" loading="lazy">
+      <div class="tile-caption"><span class="tile-caption-num">No. II · The Fireplace</span><em>Stone hearth, candlelight, evening</em></div>
+    </div>
+    <div class="gallery-tile tile-3">
+      <img src="hd/living-premium.jpg" alt="Premium living room with marble counter, Buddha statue, and designer decor" loading="lazy">
+      <div class="tile-caption"><span class="tile-caption-num">No. III · The Living</span><em>Marble, amber, quiet luxury</em></div>
+    </div>
+    <div class="gallery-tile tile-4">
+      <img src="hd/bedroom-premium.jpg" alt="Master bedroom with leather headboard, wood beam ceiling, ambient lighting" loading="lazy">
+      <div class="tile-caption"><span class="tile-caption-num">No. IV · The Master Suite</span><em>Warmth, wood, silence</em></div>
+    </div>
+    <div class="gallery-tile tile-5">
+      <img src="hd/sel-villas-car-driveway.jpg" alt="Hillcrest villas with car in driveway and mountains in the background" loading="lazy">
+      <div class="tile-caption"><span class="tile-caption-num">No. V · The Arrival</span><em>Your private entrance, lit at dusk</em></div>
+    </div>
+  </div>
+  <div class="gallery-footer">
+    <div class="ornament">&#9670; &#9670; &#9670;</div>
+    <p>Every home delivered exactly as promised. Not a compromise, not a shortcut — just craft.</p>
+  </div>
+</section>
+
+<!-- IV · VIDEO REELS -->
+<section class="reels" id="reels">
+  <div class="container">
+    <div class="reels-header">
+      <div class="roman">IV · Films</div>
+      <h2>From the <em>ground</em>.</h2>
+      <p>Walk-throughs, aerials, and quiet moments — captured from the site.</p>
+    </div>
+    <div class="reels-grid">
+      <div class="reel-card" onclick="toggleReel(this)">
+        <video muted loop playsinline preload="metadata">
+          <source src="SaveVid.Net_AQMqh9Z__ysckejDVvlz1IO-nM9bOoWssNfWJeg0wE16TAomoCCUao3f9WtTh5KVHcEmg9fwB_gVYGIFIBM-xA1W.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play"></div>
+        <div class="reel-caption">
+          <div class="reel-caption-num">Reel 01</div>
+          <div class="reel-caption-title">The Approach</div>
+        </div>
+      </div>
+      <div class="reel-card" onclick="toggleReel(this)">
+        <video muted loop playsinline preload="metadata">
+          <source src="SaveVid.Net_AQMY-liKLlii0mGgEQGilsWVADoSDhFt6qlj9yFd405a55-HTJaycjSsD-_VzanNJ_sOQUsbx4kwTCvJ6aG3IbxDWBa5dHQOmUxNAhY.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play"></div>
+        <div class="reel-caption">
+          <div class="reel-caption-num">Reel 02</div>
+          <div class="reel-caption-title">Inside the Villa</div>
+        </div>
+      </div>
+      <div class="reel-card" onclick="toggleReel(this)">
+        <video muted loop playsinline preload="metadata">
+          <source src="SaveVid.Net_AQMudiyt7kfHSns4ycyxTY8j5fefjovhbgmFRd9QkP8sRiemtyxEtTh3FE9ExwL_hHG1M2iS0SNmLsS3pGoaSN5cMm3xZWSd1fs0KgI.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play"></div>
+        <div class="reel-caption">
+          <div class="reel-caption-num">Reel 03</div>
+          <div class="reel-caption-title">The Valley View</div>
+        </div>
+      </div>
+      <div class="reel-card" onclick="toggleReel(this)">
+        <video muted loop playsinline preload="metadata">
+          <source src="SaveVid.Net_AQO2TnctDFxYwRwExRd18OTCbu9F8fHmEAR6wunQ253-M8NTOF8t7H9fP-kt3QnhkoTVY3UhRJ5TudRTEPZojdvBgItdlhhZVUa3Iis.mp4" type="video/mp4">
+        </video>
+        <div class="reel-play"></div>
+        <div class="reel-caption">
+          <div class="reel-caption-num">Reel 04</div>
+          <div class="reel-caption-title">After Sunset</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- V · EDITORIAL HIGHLIGHTS -->
+<section class="highlights" id="highlights">
+  <div class="container">
+    <div class="highlights-header">
+      <div class="roman">V · The Standard</div>
+      <h2>Built to <em>last</em>.</h2>
+      <p>Every finish, every fixture — chosen once, chosen right.</p>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-img">
+          <img src="hd/living-fireplace-wide.jpg" alt="Living room with stone fireplace, cane chairs, and chandelier" loading="lazy">
+        </div>
+        <div class="highlight-meta">No. 01 · The Interiors</div>
+        <h3>Stone Hearth, Candlelight, Evening</h3>
+        <p>Natural stone fireplace, handpicked furniture, Italian marble floors. A living room that feels like it's been there for decades — built in months.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-img">
+          <img src="hd/sel-balcony-mountain-day.jpg" alt="Private deck with seating overlooking Shivalik mountains by day" loading="lazy">
+        </div>
+        <div class="highlight-meta">No. 02 · The Views</div>
+        <h3>City Lights from Your Private Deck</h3>
+        <p>Every villa comes with a private balcony that faces the valley. Mountains by day, the glowing city by night — all from your armchair.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-img">
+          <img src="hd/pergola-city-dusk.jpg" alt="Garden pergola at dusk with city lights in the distance" loading="lazy">
+        </div>
+        <div class="highlight-meta">No. 03 · The Grounds</div>
+        <h3>In the Hills, Never Far</h3>
+        <p>Private pergola, manicured lawn, garden pathways — and the city just fifteen minutes away. Every amenity at arm's reach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VI · NEW PROJECT -->
+<section class="next-project" id="next">
+  <div class="container">
+    <div class="next-inner">
+      <div class="roman">VI · What's Next</div>
+      <h2>A new chapter <em>begins</em>.</h2>
+      <p class="next-lead">Hillcrest proved what we stand for — quality, honesty, and delivery. Now we're bringing that same standard to a new MDDA approved plotting project in Dehradun. The land is secured, the approvals are in place, and the details are being finalized.</p>
+      <div class="next-features">
+        <div class="nf">
+          <div class="nf-title"><em>MDDA</em> Approved</div>
+          <div class="nf-text">Fully sanctioned plots</div>
+        </div>
+        <div class="nf">
+          <div class="nf-title">Dehradun, <em>Uttarakhand</em></div>
+          <div class="nf-text">Prime location in the Doon Valley</div>
+        </div>
+        <div class="nf">
+          <div class="nf-title">By <em>Urban Estates</em></div>
+          <div class="nf-text">From the team behind Hillcrest</div>
+        </div>
+      </div>
+      <p class="next-note">Location, sizes, pricing, and site plans will be shared on this website soon. Reach out now for early access and priority updates.</p>
+      <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20upcoming%20Urban%20Estates%20plotting%20project.%20Please%20share%20details%20and%20early%20access." class="next-cta">Get Early Access &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<!-- VII · LOCATION -->
+<section class="location" id="location">
+  <div class="container">
+    <div class="location-header">
+      <div class="roman">VII · Find Us</div>
+      <h2>Where we <em>are</em></h2>
+    </div>
+    <div class="location-grid">
+      <div class="location-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d78.1!3d30.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d700695c38c1%3A0x4f9be5d389a1c1ff!2sHill%20Crest%20Dehradun%20%E2%80%93%20Luxury%20Hilltop%20Villas%20%7C%20MDDA%20Approved%20Gated%20Community!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="location-details">
+        <div class="loc-card">
+          <h4>Address</h4>
+          <p>Hill Crest, Khurawa<br>Near Pacific Golf Estate, Kulhan<br>Nagalhat Nala, Chalang<br>Uttarakhand 248013</p>
+          <a href="https://maps.app.goo.gl/ni9FEFTEHBdHatMU8?g_st=iw" target="_blank" rel="noopener" class="gmb-badge">View on Google Maps &#8594;</a>
+        </div>
+        <div class="loc-card">
+          <h4>Contact</h4>
+          <a href="tel:+917055888555">+91 70558 88555</a>
+          <a href="https://wa.me/917055888555">WhatsApp</a>
+        </div>
+        <div class="loc-card">
+          <h4>Follow</h4>
+          <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">@uestates_</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIII · INSTAGRAM -->
+<section class="instagram" id="instagram">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">From the <em>feed</em></h2>
+      <div class="section-line"></div>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener" class="ig-handle">@uestates_ &#8594;</a>
+    </div>
+    <div class="ig-grid">
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-drone-mountains-cloudy.jpg" alt="Aerial view of Hillcrest villas with dramatic mountain backdrop" loading="lazy">
+      </a>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-bedroom-gold.jpg" alt="Elegant bedroom with gold accents and designer lighting" loading="lazy">
+      </a>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-villa-city-overlook.jpg" alt="Hillcrest villa with lawn overlooking city and mountains" loading="lazy">
+      </a>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-living-fireplace-green.jpg" alt="Living room with stone fireplace and olive sofa" loading="lazy">
+      </a>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-pergola-sunset.jpg" alt="Villa pergola and garden at golden sunset" loading="lazy">
+      </a>
+      <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">
+        <img src="hd/sel-bedroom-canopy.jpg" alt="Master bedroom with sheer canopy and wooden ceiling" loading="lazy">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- IX · ENQUIRE -->
+<section class="reserve" id="contact">
+  <div class="reserve-bg">
+    <img src="hd/sel-drone-sunset-pink.jpg" alt="Hillcrest villas at sunset">
+  </div>
+  <div class="reserve-inner">
+    <div class="roman">IX · Enquire</div>
+    <h2>Let's <em>talk</em>.</h2>
+    <p class="reserve-sub">Hillcrest is sold out — but our next project is around the corner. Be the first to know.</p>
+    <div class="reserve-form">
+      <div class="reserve-form-label">Get in Touch</div>
+      <div class="cta-group">
+        <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20upcoming%20Urban%20Estates%20project.%20Please%20share%20details." class="cta cta-primary">WhatsApp &#8594;</a>
+        <a href="tel:+917055888555" class="cta cta-secondary">Call Now</a>
+      </div>
+      <div class="reserve-note">For the new plotting project, site visits, or any questions — we're a call away.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-monogram">U</div>
+      <div class="footer-name">Urban Estates</div>
+      <div class="footer-sub">Dehradun · Est. MMXXIV</div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Hillcrest · Sold Out</h4>
+        <p>3BHK luxury villas in Sahastradhara — all villas sold. Thank you for the trust.</p>
+      </div>
+      <div class="footer-col">
+        <h4>New Project · Coming Soon</h4>
+        <p>MDDA approved plots in Dehradun.</p>
+        <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20new%20Urban%20Estates%20project.">Get early access</a>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <p>Hill Crest, Khurawa<br>Near Pacific Golf Estate, Kulhan<br>Uttarakhand 248013</p>
+        <a href="https://maps.app.goo.gl/ni9FEFTEHBdHatMU8?g_st=iw" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://instagram.com/uestates_" target="_blank" rel="noopener">@uestates_</a>
+        <a href="tel:+917055888555">+91 70558 88555</a>
+        <a href="https://wa.me/917055888555">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; MMXXVI Urban Estates &middot; All rights reserved</div>
+      <div>MDDA Approved &middot; Khurawa, Sahastradhara, Dehradun 248013</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  function toggleReel(card) {
+    const video = card.querySelector('video');
+    if (card.classList.contains('playing')) {
+      video.pause();
+      card.classList.remove('playing');
+    } else {
+      document.querySelectorAll('.reel-card.playing').forEach(c => {
+        c.querySelector('video').pause();
+        c.classList.remove('playing');
+      });
+      video.play();
+      card.classList.add('playing');
+    }
+  }
+</script>
+
+</body>
+</html>
