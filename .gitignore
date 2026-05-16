@@ -7,7 +7,6 @@
 !index.html
 !hd/
 !hd/**
-!SaveVid.Net_*.mp4
 
 # Ignore dev/build files
 .claude/

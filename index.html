@@ -67,6 +67,7 @@
   header.scrolled .nav-links a:hover { color: var(--accent); }
   .nav-cta { display: inline-flex; align-items: center; gap: 10px; padding: 11px 26px; font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.28em; color: var(--ink); background: var(--cream-on-dark); text-decoration: none; border-radius: 999px; transition: all 0.4s ease; }
   .nav-cta:hover { background: var(--accent); color: var(--bg); }
+  header.scrolled .nav-cta { border: 1px solid var(--line); }
 
   /* HERO */
   .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: var(--dark); }
@@ -144,7 +145,7 @@
   .gallery-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.65)); pointer-events: none; }
   .tile-caption { position: absolute; bottom: 24px; left: 24px; z-index: 2; font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream-on-dark); }
   .tile-caption-num { display: block; font-family: var(--body); font-style: normal; font-size: 9px; letter-spacing: 0.4em; color: var(--accent-soft); margin-bottom: 6px; text-transform: uppercase; }
-  .gallery-footer { text-align: center; padding: 120px 32px 160px; }
+  .gallery-footer { text-align: center; padding: 120px 48px 160px; }
   .gallery-footer .ornament { color: var(--accent-soft); font-size: 16px; letter-spacing: 1em; margin-bottom: 40px; }
   .gallery-footer p { font-family: var(--display); font-style: italic; font-size: 24px; color: var(--cream-on-dark); max-width: 640px; margin: 0 auto; line-height: 1.5; }
 
@@ -157,7 +158,7 @@
   .reels-header p { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.5; }
   .reels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .reel-card { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: var(--dark); cursor: pointer; }
-  .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.85); }
+  .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .reel-card:hover video { transform: scale(1.05); filter: brightness(1); }
   .reel-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,20,16,0.7)); pointer-events: none; }
   .reel-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(232,220,196,0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(232,220,196,0.35); display: flex; align-items: center; justify-content: center; z-index: 3; transition: all 0.4s ease; pointer-events: none; opacity: 0; }
@@ -186,7 +187,8 @@
 
   /* NEW PROJECT CTA */
   .next-project { background: var(--dark); color: var(--cream-on-dark); padding: 160px 0; position: relative; overflow: hidden; }
-  .next-project::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(168,135,82,0.08) 0%, transparent 70%); pointer-events: none; }
+  .next-project::before { content: ''; position: absolute; inset: 0; background: url('hd/sel-drone-mountains-cloudy.jpg') center/cover no-repeat; opacity: 0.07; pointer-events: none; }
+  .next-project::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(168,135,82,0.08) 0%, transparent 70%); pointer-events: none; }
   .next-inner { max-width: 920px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
   .next-project .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 48px; }
   .next-project h2 { font-family: var(--display); font-weight: 300; font-size: clamp(44px, 6vw, 88px); line-height: 1.05; letter-spacing: -0.025em; margin-bottom: 40px; }
@@ -202,7 +204,7 @@
   .next-cta:hover { background: var(--accent-soft); transform: translateY(-2px); }
 
   /* LOCATION */
-  .location { padding: 140px 0; background: var(--bg); border-top: 1px solid var(--line); }
+  .location { padding: 180px 0; background: var(--bg); }
   .location-header { text-align: center; margin-bottom: 80px; }
   .location-header .roman { margin-bottom: 32px; }
   .location-header h2 { font-family: var(--display); font-weight: 300; font-size: clamp(40px, 5vw, 64px); line-height: 1.1; letter-spacing: -0.02em; }
@@ -221,7 +223,7 @@
   .gmb-badge:hover { background: var(--accent); color: var(--bg); }
 
   /* INSTAGRAM */
-  .instagram { padding: 120px 0; background: var(--bg-2); border-top: 1px solid var(--line); }
+  .instagram { padding: 120px 0; background: var(--bg-2); }
   .section-header { display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: end; margin-bottom: 80px; }
   .section-title { font-family: var(--display); font-weight: 300; font-size: clamp(36px, 4.5vw, 56px); line-height: 1; letter-spacing: -0.02em; }
   .section-title em { font-style: italic; color: var(--accent); }
@@ -230,18 +232,18 @@
   .ig-handle:hover { color: var(--accent); border-color: var(--accent); }
   .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .ig-grid a { display: block; position: relative; aspect-ratio: 1; overflow: hidden; background: var(--surface); }
-  .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+  .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .ig-grid a:hover img { transform: scale(1.05); }
   .ig-grid a::after { content: ''; position: absolute; inset: 0; background: rgba(15,20,16,0); transition: background 0.4s ease; }
   .ig-grid a:hover::after { background: rgba(15,20,16,0.15); }
 
   /* CONTACT */
-  .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 32px; }
+  .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 48px; }
   .reserve-bg { position: absolute; inset: 0; z-index: 0; }
   .reserve-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.22) saturate(0.8); }
   .reserve-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(rgba(15,20,16,0.5), rgba(15,20,16,0.8)); }
   .reserve-inner { max-width: 760px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
-  .reserve .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 32px; }
+  .reserve .roman { color: var(--accent-soft); border-color: var(--accent-soft); margin-bottom: 48px; }
   .reserve h2 { font-family: var(--display); font-weight: 300; font-size: clamp(48px, 7vw, 108px); line-height: 1; letter-spacing: -0.025em; margin-bottom: 32px; }
   .reserve h2 em { font-style: italic; color: var(--accent-soft); }
   .reserve-sub { font-family: var(--display); font-style: italic; font-size: 22px; color: var(--cream-on-dark); max-width: 540px; margin: 0 auto 64px; line-height: 1.55; }
@@ -474,7 +476,7 @@
 <section class="pull-quote">
   <div class="pull-quote-inner reveal">
     <div class="roman">II · Our Promise</div>
-    <blockquote>"We don't sell homes — we build <em>trust</em>. The finish speaks. The families stay. And now, we're ready to do it again."</blockquote>
+    <blockquote>“We don’t sell homes — we build <em>trust</em>. The finish speaks. The families stay. And now, we’re ready to do it again.”</blockquote>
     <cite>Urban Estates · Dehradun</cite>
   </div>
 </section>
@@ -526,7 +528,7 @@
     <div class="reels-grid">
       <div class="reel-card" onclick="toggleReel(this)">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-1.jpg">
-          <source src="SaveVid.Net_AQMqh9Z__ysckejDVvlz1IO-nM9bOoWssNfWJeg0wE16TAomoCCUao3f9WtTh5KVHcEmg9fwB_gVYGIFIBM-xA1W.mp4" type="video/mp4">
+          <source src="hd/reel-01-approach.mp4" type="video/mp4">
         </video>
         <div class="reel-play"></div>
         <div class="reel-caption">
@@ -536,7 +538,7 @@
       </div>
       <div class="reel-card" onclick="toggleReel(this)">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-2.jpg">
-          <source src="SaveVid.Net_AQMY-liKLlii0mGgEQGilsWVADoSDhFt6qlj9yFd405a55-HTJaycjSsD-_VzanNJ_sOQUsbx4kwTCvJ6aG3IbxDWBa5dHQOmUxNAhY.mp4" type="video/mp4">
+          <source src="hd/reel-02-interior.mp4" type="video/mp4">
         </video>
         <div class="reel-play"></div>
         <div class="reel-caption">
@@ -546,7 +548,7 @@
       </div>
       <div class="reel-card" onclick="toggleReel(this)">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-3.jpg">
-          <source src="SaveVid.Net_AQMudiyt7kfHSns4ycyxTY8j5fefjovhbgmFRd9QkP8sRiemtyxEtTh3FE9ExwL_hHG1M2iS0SNmLsS3pGoaSN5cMm3xZWSd1fs0KgI.mp4" type="video/mp4">
+          <source src="hd/reel-03-valley.mp4" type="video/mp4">
         </video>
         <div class="reel-play"></div>
         <div class="reel-caption">
@@ -556,7 +558,7 @@
       </div>
       <div class="reel-card" onclick="toggleReel(this)">
         <video muted loop playsinline preload="none" poster="hd/reel-poster-4.jpg">
-          <source src="SaveVid.Net_AQO2TnctDFxYwRwExRd18OTCbu9F8fHmEAR6wunQ253-M8NTOF8t7H9fP-kt3QnhkoTVY3UhRJ5TudRTEPZojdvBgItdlhhZVUa3Iis.mp4" type="video/mp4">
+          <source src="hd/reel-04-sunset.mp4" type="video/mp4">
         </video>
         <div class="reel-play"></div>
         <div class="reel-caption">
@@ -641,7 +643,7 @@
     </div>
     <div class="location-grid">
       <div class="location-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d78.1!3d30.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d700695c38c1%3A0x4f9be5d389a1c1ff!2sHill%20Crest%20Dehradun%20%E2%80%93%20Luxury%20Hilltop%20Villas%20%7C%20MDDA%20Approved%20Gated%20Community!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.5!2d78.0425!3d30.3785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908d700695c38c1%3A0x4f9be5d389a1c1ff!2sHill%20Crest%20Dehradun%20%E2%80%93%20Luxury%20Hilltop%20Villas%20%7C%20MDDA%20Approved%20Gated%20Community!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="location-details">
         <div class="loc-card">
@@ -666,6 +668,7 @@
 <!-- VIII · INSTAGRAM -->
 <section class="instagram" id="instagram">
   <div class="container">
+    <div class="roman reveal" style="text-align:center; margin-bottom:32px;">VIII · The Feed</div>
     <div class="section-header reveal">
       <h2 class="section-title">From the <em>feed</em></h2>
       <div class="section-line"></div>
@@ -778,7 +781,7 @@
     if (!p.classList.contains('done')) p.classList.add('done');
   }
   window.addEventListener('load', dismissPreloader);
-  setTimeout(dismissPreloader, 4000);
+  setTimeout(dismissPreloader, 2200);
 
   // Scroll reveals
   const revealObserver = new IntersectionObserver((entries) => {
@@ -795,16 +798,26 @@
   }, { threshold: 0.3 });
   document.querySelectorAll('.zoom-on-scroll').forEach(el => zoomObserver.observe(el));
 
-  // Word-by-word text reveal
+  // Word-by-word text reveal (operates on text nodes to preserve <em> tags)
   document.querySelectorAll('.word-reveal').forEach(el => {
-    const html = el.innerHTML;
-    const wrapped = html.replace(/(\S+)/g, (match) => {
-      return '<span class="word">' + match + '</span>';
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    const textNodes = [];
+    let node;
+    while (node = walker.nextNode()) textNodes.push(node);
+    textNodes.forEach(tn => {
+      const words = tn.textContent.split(/(\s+)/);
+      const frag = document.createDocumentFragment();
+      words.forEach(w => {
+        if (/^\s*$/.test(w)) { frag.appendChild(document.createTextNode(w)); return; }
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.textContent = w;
+        frag.appendChild(span);
+      });
+      tn.parentNode.replaceChild(frag, tn);
     });
-    el.innerHTML = wrapped;
-    el.querySelectorAll('.word').forEach((w, i) => {
-      w.style.transitionDelay = (i * 0.07) + 's';
-    });
+    let i = 0;
+    el.querySelectorAll('.word').forEach(w => { w.style.transitionDelay = (i++ * 0.07) + 's'; });
   });
   const wordObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); wordObserver.unobserve(e.target); } });
