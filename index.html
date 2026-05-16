@@ -27,15 +27,15 @@
     --surface: #E5DDCC;
     --ink: #1A1F1A;
     --ink-soft: #2A3025;
-    --dark: #0F1410;
-    --dark-2: #1A2018;
+    --dark: #0C0A08;
+    --dark-2: #161210;
     --cream-on-dark: #E8DCC4;
     --cream-soft: #C5BBA5;
     --muted: #6B6F5F;
     --muted-on-dark: #8B8676;
     --line: #CFC6B4;
     --line-soft: #DDD4C0;
-    --line-dark: #2D3329;
+    --line-dark: #2A2420;
     --accent: #A88752;
     --accent-soft: #C9A961;
     --display: 'Cormorant Garamond', 'Times New Roman', serif;
@@ -73,7 +73,7 @@
   .hero-cinema { height: 100vh; min-height: 700px; position: relative; overflow: hidden; color: var(--cream-on-dark); background: var(--dark); }
   .hero-cinema { --parallax: 0px; }
   .hero-cinema::before { content: ''; position: absolute; inset: -60px 0 0 0; background: url('hd/hero.jpg') center/cover no-repeat; animation: kenBurns 25s ease-in-out infinite alternate; transform: translateY(var(--parallax)); will-change: transform; }
-  .hero-cinema::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(15,20,16,0.25) 0%, rgba(15,20,16,0.45) 40%, rgba(15,20,16,0.78) 100%); z-index: 1; }
+  .hero-cinema::after { content: ''; position: absolute; inset: 0; background: linear-gradient(170deg, rgba(12,10,8,0.25) 0%, rgba(12,10,8,0.45) 40%, rgba(12,10,8,0.78) 100%); z-index: 1; }
   .hero-light { position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(ellipse 80% 60% at 30% 20%, rgba(201,169,97,0.12) 0%, transparent 70%); animation: lightDrift 12s ease-in-out infinite alternate; }
   @keyframes kenBurns { 0% { transform: scale(1) translate(0, 0); } 100% { transform: scale(1.12) translate(-1.5%, -1%); } }
   @keyframes lightDrift { 0% { opacity: 0.6; transform: translate(0, 0); } 100% { opacity: 1; transform: translate(3%, 2%); } }
@@ -142,7 +142,7 @@
   .tile-5 { grid-column: 5/7; }
   .gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .gallery-tile:hover img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05); }
-  .gallery-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.65)); pointer-events: none; }
+  .gallery-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(12,10,8,0.65)); pointer-events: none; }
   .tile-caption { position: absolute; bottom: 24px; left: 24px; z-index: 2; font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream-on-dark); }
   .tile-caption-num { display: block; font-family: var(--body); font-style: normal; font-size: 9px; letter-spacing: 0.4em; color: var(--accent-soft); margin-bottom: 6px; text-transform: uppercase; }
   .gallery-footer { text-align: center; padding: 120px 48px 160px; }
@@ -160,7 +160,7 @@
   .reel-card { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: var(--dark); cursor: pointer; }
   .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .reel-card:hover video { transform: scale(1.05); filter: brightness(1); }
-  .reel-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,20,16,0.7)); pointer-events: none; }
+  .reel-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(12,10,8,0.7)); pointer-events: none; }
   .reel-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(232,220,196,0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(232,220,196,0.35); display: flex; align-items: center; justify-content: center; z-index: 3; transition: all 0.4s ease; pointer-events: none; opacity: 0; }
   .reel-card:not(.playing) .reel-play { opacity: 1; }
   .reel-play::after { content: ''; width: 0; height: 0; border-left: 14px solid var(--cream-on-dark); border-top: 9px solid transparent; border-bottom: 9px solid transparent; margin-left: 3px; }
@@ -179,7 +179,7 @@
   .highlight-card { cursor: default; }
   .highlight-img { aspect-ratio: 4/5; background: var(--surface); overflow: hidden; margin-bottom: 24px; position: relative; }
   .highlight-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
-  .highlight-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.45)); pointer-events: none; }
+  .highlight-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(12,10,8,0.45)); pointer-events: none; }
   .highlight-card:hover .highlight-img img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05); }
   .highlight-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.32em; color: var(--accent); margin-bottom: 10px; font-weight: 500; }
   .highlight-card h3 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.3; color: var(--ink); margin-bottom: 12px; }
@@ -233,8 +233,8 @@
   .ig-grid a { display: block; position: relative; aspect-ratio: 1; overflow: hidden; background: var(--surface); }
   .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .ig-grid a:hover img { transform: scale(1.05); }
-  .ig-grid a::after { content: ''; position: absolute; inset: 0; background: rgba(15,20,16,0); transition: background 0.4s ease; }
-  .ig-grid a:hover::after { background: rgba(15,20,16,0.15); }
+  .ig-grid a::after { content: ''; position: absolute; inset: 0; background: rgba(12,10,8,0); transition: background 0.4s ease; }
+  .ig-grid a:hover::after { background: rgba(12,10,8,0.15); }
 
   /* CONTACT */
   .reserve { position: relative; overflow: hidden; color: var(--cream-on-dark); padding: 180px 48px; background: var(--dark); }
@@ -285,8 +285,8 @@
   /* CINEMATIC LETTERBOX */
   .hero-cinema .letterbox-top,
   .hero-cinema .letterbox-bottom { position: absolute; left: 0; right: 0; height: 8vh; z-index: 2; pointer-events: none; }
-  .hero-cinema .letterbox-top { top: 0; background: linear-gradient(180deg, rgba(15,20,16,0.6) 0%, transparent 100%); }
-  .hero-cinema .letterbox-bottom { bottom: 0; background: linear-gradient(0deg, rgba(15,20,16,0.7) 0%, transparent 100%); }
+  .hero-cinema .letterbox-top { top: 0; background: linear-gradient(180deg, rgba(12,10,8,0.6) 0%, transparent 100%); }
+  .hero-cinema .letterbox-bottom { bottom: 0; background: linear-gradient(0deg, rgba(12,10,8,0.7) 0%, transparent 100%); }
 
   /* PARALLAX SECTIONS */
   .parallax-img { transition: transform 0.1s linear; will-change: transform; }
