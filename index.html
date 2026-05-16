@@ -17,7 +17,8 @@
 <link rel="preload" as="image" href="hd/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
 
 <style>
   :root {
@@ -138,7 +139,7 @@
   .tile-3 { grid-column: 1/3; }
   .tile-4 { grid-column: 3/5; }
   .tile-5 { grid-column: 5/7; }
-  .gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.4s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
+  .gallery-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
   .gallery-tile:hover img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05); }
   .gallery-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.65)); pointer-events: none; }
   .tile-caption { position: absolute; bottom: 24px; left: 24px; z-index: 2; font-family: var(--display); font-style: italic; font-size: 18px; color: var(--cream-on-dark); }
@@ -156,8 +157,8 @@
   .reels-header p { font-family: var(--display); font-style: italic; font-size: 19px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.5; }
   .reels-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .reel-card { position: relative; aspect-ratio: 9/16; border-radius: 12px; overflow: hidden; background: var(--dark); cursor: pointer; }
-  .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.85); }
-  .reel-card:hover video { transform: scale(1.04); filter: brightness(1); }
+  .reel-card video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.85); }
+  .reel-card:hover video { transform: scale(1.05); filter: brightness(1); }
   .reel-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(15,20,16,0.7)); pointer-events: none; }
   .reel-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 56px; height: 56px; border-radius: 50%; background: rgba(232,220,196,0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(232,220,196,0.35); display: flex; align-items: center; justify-content: center; z-index: 3; transition: all 0.4s ease; pointer-events: none; opacity: 0; }
   .reel-card:not(.playing) .reel-play { opacity: 1; }
@@ -176,8 +177,9 @@
   .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .highlight-card { cursor: default; }
   .highlight-img { aspect-ratio: 4/5; background: var(--surface); overflow: hidden; margin-bottom: 24px; position: relative; }
-  .highlight-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
-  .highlight-card:hover .highlight-img img { transform: scale(1.05); }
+  .highlight-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); filter: brightness(0.92) contrast(1.05); }
+  .highlight-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(15,20,16,0.45)); pointer-events: none; }
+  .highlight-card:hover .highlight-img img { transform: scale(1.05); filter: brightness(1.02) contrast(1.05); }
   .highlight-meta { font-size: 10px; text-transform: uppercase; letter-spacing: 0.32em; color: var(--accent); margin-bottom: 10px; font-weight: 500; }
   .highlight-card h3 { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 22px; line-height: 1.3; color: var(--ink); margin-bottom: 12px; }
   .highlight-card p { font-size: 14px; line-height: 1.7; color: var(--muted); }
@@ -196,7 +198,7 @@
   .nf-title em { font-style: italic; color: var(--accent-soft); }
   .nf-text { font-size: 12px; color: var(--muted-on-dark); letter-spacing: 0.15em; text-transform: uppercase; }
   .next-note { font-family: var(--display); font-style: italic; font-size: 20px; color: var(--muted-on-dark); max-width: 520px; margin: 0 auto 48px; line-height: 1.5; }
-  .next-cta { display: inline-flex; align-items: center; gap: 12px; padding: 20px 44px; font-family: var(--body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.32em; color: var(--dark); background: var(--cream-on-dark); text-decoration: none; border-radius: 999px; transition: all 0.4s ease; }
+  .next-cta { display: inline-flex; align-items: center; gap: 12px; padding: 20px 40px; font-family: var(--body); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.32em; color: var(--dark); background: var(--cream-on-dark); text-decoration: none; border-radius: 999px; transition: all 0.4s ease; }
   .next-cta:hover { background: var(--accent-soft); transform: translateY(-2px); }
 
   /* LOCATION */
@@ -228,8 +230,8 @@
   .ig-handle:hover { color: var(--accent); border-color: var(--accent); }
   .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .ig-grid a { display: block; position: relative; aspect-ratio: 1; overflow: hidden; background: var(--surface); }
-  .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s cubic-bezier(0.16,1,0.3,1); }
-  .ig-grid a:hover img { transform: scale(1.06); }
+  .ig-grid a img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(0.16,1,0.3,1); }
+  .ig-grid a:hover img { transform: scale(1.05); }
   .ig-grid a::after { content: ''; position: absolute; inset: 0; background: rgba(15,20,16,0); transition: background 0.4s ease; }
   .ig-grid a:hover::after { background: rgba(15,20,16,0.15); }
 
@@ -316,13 +318,30 @@
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: translateY(0); } }
 
+  /* MOBILE MENU */
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 201; position: relative; }
+  .menu-toggle span { display: block; width: 22px; height: 1.5px; background: var(--cream-on-dark); margin: 5px 0; transition: all 0.35s ease; }
+  header.scrolled .menu-toggle span { background: var(--ink); }
+  .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+  .menu-toggle.active span:nth-child(2) { opacity: 0; }
+  .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+  .menu-toggle.active span { background: var(--cream-on-dark); }
+  .mobile-overlay { position: fixed; inset: 0; z-index: 200; background: var(--dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; }
+  .mobile-overlay.open { opacity: 1; visibility: visible; }
+  .mobile-overlay a { font-family: var(--display); font-size: 32px; font-weight: 300; color: var(--cream-on-dark); text-decoration: none; opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease, color 0.3s ease; }
+  .mobile-overlay.open a { opacity: 1; transform: translateY(0); }
+  .mobile-overlay a:hover { color: var(--accent-soft); }
+  .mobile-overlay a em { font-style: italic; color: var(--accent-soft); }
+
   @media (max-width: 860px) {
+    .menu-toggle { display: block; }
     .container { padding: 0 24px; }
     .nav-links { display: none; }
     .monogram { width: 32px; height: 32px; font-size: 15px; }
     .logo { font-size: 22px; }
     .hero-cinema { min-height: 600px; }
-    .hero-cinema-inner { padding: 0 24px 80px; }
+    .hero-cinema h1 { font-size: clamp(52px, 12vw, 196px); }
+    .hero-cinema-inner { padding: 0 24px 60px; }
     .hero-side-mark, .hero-corner-mark { display: none; }
     .hero-bottom-row { grid-template-columns: 1fr; gap: 28px; }
     .hero-status { text-align: left; }
@@ -385,8 +404,20 @@
       <li><a href="#contact">Enquire</a></li>
     </ul>
     <a href="https://wa.me/917055888555?text=Hi%2C%20I%27m%20interested%20in%20the%20upcoming%20Urban%20Estates%20project.%20Please%20share%20details." class="nav-cta">Enquire Now</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-overlay" id="mobileOverlay">
+  <a href="#project" onclick="closeMenu()">The <em>Villas</em></a>
+  <a href="#gallery" onclick="closeMenu()">The <em>Residences</em></a>
+  <a href="#reels" onclick="closeMenu()">The <em>Films</em></a>
+  <a href="#next" onclick="closeMenu()">What's <em>Next</em></a>
+  <a href="#location" onclick="closeMenu()">Find <em>Us</em></a>
+  <a href="#contact" onclick="closeMenu()">Enquire <em>Now</em></a>
+</div>
 
 <!-- HERO -->
 <section class="hero-cinema">
@@ -604,7 +635,7 @@
 <!-- VII · LOCATION -->
 <section class="location" id="location">
   <div class="container">
-    <div class="location-header">
+    <div class="location-header reveal">
       <div class="roman">VII · Find Us</div>
       <h2>Where we <em>are</em></h2>
     </div>
@@ -794,6 +825,21 @@
       container.appendChild(p);
     }
   })();
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  mobileOverlay.querySelectorAll('a').forEach((a, i) => { a.style.transitionDelay = (i * 0.06) + 's'; });
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    mobileOverlay.classList.toggle('open');
+    document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
+  });
+  function closeMenu() {
+    menuToggle.classList.remove('active');
+    mobileOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
 
   function toggleReel(card) {
     const video = card.querySelector('video');
