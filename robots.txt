@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /hd/reel-*
+
+Sitemap: https://hillcrestdehradun.com/sitemap.xml

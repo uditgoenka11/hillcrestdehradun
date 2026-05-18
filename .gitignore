@@ -5,6 +5,8 @@
 !.gitignore
 !CNAME
 !index.html
+!robots.txt
+!sitemap.xml
 !hd/
 !hd/**
 
