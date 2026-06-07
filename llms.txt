@@ -79,5 +79,6 @@ A: Low-density luxury living with only 15 villas, ensuring greater privacy and e
 ## Pages
 
 - Home: https://hillcrestdehradun.com/
+- About: https://hillcrestdehradun.com/about.html
 - FAQ: https://hillcrestdehradun.com/faq.html
 - Privacy Policy: https://hillcrestdehradun.com/privacy.html
