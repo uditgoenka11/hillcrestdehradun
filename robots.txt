@@ -1,15 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /hd/reel-*
-Disallow: /8.html
-Disallow: /Instagram.html
-Disallow: /Instagram1.html
-Disallow: /hillcrest-v3-premium_1.html
-Disallow: /hillcrest-v3-premium_2.html
-Disallow: /hillcrest-v4-hospitality.html
-Disallow: /hillcrest-v5-new.html
-Disallow: /hillcrest-v5.html
-Disallow: /hillcrest-v6.html
-Disallow: /result.html
 
 Sitemap: https://hillcrestdehradun.com/sitemap.xml
