@@ -12,6 +12,8 @@
 !hd/**
 !.nojekyll
 !privacy.html
+!faq.html
+!llms.txt
 !fonts/
 !fonts/**
 
